@@ -29,12 +29,12 @@ const Container = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: #431f17;
     h3 {
       font-size: 24px;
     }
     h1 {
       font-family: Sofia;
-      font-weight: bold;
       font-size: 48px;
     }
   }
