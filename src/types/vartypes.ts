@@ -3,8 +3,8 @@ import { ReactNode } from "react";
 export interface headerLinkType {
   url: string;
   name: string;
-  icon: boolean;
-  iconLink: ReactNode;
+  icon?: boolean;
+  iconLink?: ReactNode;
 }
 
 export interface btnType {
