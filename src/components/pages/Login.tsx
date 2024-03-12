@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import { HeaderLink, LoginDefSection } from "../atoms";
-import { IoIosArrowForward } from "react-icons/io";
+import { LoginDefSection } from "../atoms";
 
 function Login() {
   return (
