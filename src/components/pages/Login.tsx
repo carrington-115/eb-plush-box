@@ -9,23 +9,7 @@ function Login() {
         <LoginDefSection text="Login to" />
       </div>
       <div className="right">
-        <div className="test">
-          <HeaderLink url="/" name="Home" />
-          <HeaderLink
-            url="/"
-            icon={true}
-            iconLink={
-              <IoIosArrowForward
-                style={{
-                  width: "24px",
-                  height: "24px",
-                  fill: "rgba(20, 14, 7, 1)",
-                }}
-              />
-            }
-            name="Home"
-          />
-        </div>
+        <div className="test"></div>
       </div>
     </Container>
   );
