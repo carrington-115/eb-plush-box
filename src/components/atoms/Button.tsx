@@ -1,17 +1,5 @@
-import { ReactNode } from "react";
 import styled from "styled-components";
-
-interface btnType {
-  text?: boolean;
-  name?: string;
-  bgColor: string;
-  btnAction: () => void;
-  color: string;
-  icon?: boolean;
-  iconLink?: ReactNode;
-  status: string;
-  shadow?: boolean;
-}
+import { btnType } from "../../types/vartypes";
 
 function Button({
   text,
