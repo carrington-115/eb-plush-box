@@ -3,13 +3,19 @@ import { logo } from "../../assets";
 import { NavLink } from "react-router-dom";
 import { Button, HeaderLink } from "../atoms";
 import { IoIosArrowForward } from "react-icons/io";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { IoMdCart } from "react-icons/io";
 
 function Header() {
   const [signedIn, setSignedIn] = useState<boolean>(false);
   const [orderNumber, setOrderNumber] = useState<number>(12);
-  const [userNameInitial, setUserNameInitial] = useState<string>("M");
+  const [userNameInitial, setUserNameInitial] = useState<string>("");
+
+  useEffect(() => {
+    if (signedIn) {
+      setUserNameInitial("M");
+    }
+  }, [signedIn]);
   return (
     <Container>
       <NavLink className="logo-container" to="/home">
