@@ -5,6 +5,7 @@ import { Button, HeaderLink } from "../atoms";
 import { IoIosArrowForward } from "react-icons/io";
 import { useState, useEffect } from "react";
 import { IoMdCart } from "react-icons/io";
+import MobileHeader from "./MobileHeader";
 
 function Header() {
   const [signedIn, setSignedIn] = useState<boolean>(false);
@@ -73,6 +74,9 @@ function Header() {
           </button>
         </div>
       )}
+      <div className="mobile-header">
+        <MobileHeader />
+      </div>
     </Container>
   );
 }
@@ -85,10 +89,12 @@ const Container = styled.header`
   display: flex;
   justify-content: space-around;
   padding: 10px 0;
-  /* gap: 165px; */
   .logo-container {
     width: 200px;
     height: auto;
+    @media (min-width: 320px) and (max-width: 599px) {
+      display: none;
+    }
     img {
       width: 100%;
       height: 100%;
@@ -98,12 +104,18 @@ const Container = styled.header`
     display: flex;
     gap: 12px;
     align-items: center;
+    @media (min-width: 320px) and (max-width: 599px) {
+      display: none;
+    }
   }
   .account-btns,
   .user-btns {
     display: flex;
     align-items: center;
     gap: 30px;
+    @media (min-width: 320px) and (max-width: 599px) {
+      display: none;
+    }
   }
 
   .user-btns {
@@ -115,6 +127,9 @@ const Container = styled.header`
       border-radius: 50%;
       background-color: rgba(251, 247, 246, 1);
       border: none;
+      @media (min-width: 320px) and (max-width: 599px) {
+        display: none;
+      }
       &:hover {
         background-color: rgba(234, 215, 211, 1);
       }
