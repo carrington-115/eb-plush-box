@@ -75,7 +75,7 @@ function Header() {
         </div>
       )}
       <div className="mobile-header">
-        <MobileHeader />
+        <MobileHeader status={true} />
       </div>
     </Container>
   );
