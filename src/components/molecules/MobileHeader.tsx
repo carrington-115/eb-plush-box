@@ -15,8 +15,9 @@ const pageLinks: pageLinkTypes[] = [
 ];
 interface hamMenuType {
   status: boolean;
+  closeActivity: () => void;
 }
-function MobileHeader({ status }: hamMenuType) {
+function MobileHeader({ status, closeActivity }: hamMenuType) {
   return (
     <Container
       style={{
@@ -25,7 +26,7 @@ function MobileHeader({ status }: hamMenuType) {
       }}
     >
       <section className="top-mobile-header">
-        <span className="close-btn">
+        <span onClick={closeActivity} className="close-btn">
           <MdClose
             style={{
               width: "62px",
