@@ -13,12 +13,20 @@ const pageLinks: pageLinkTypes[] = [
   { name: "About us", to: "/about" },
   { name: "Contact us", to: "/contact" },
 ];
-
-function MobileHeader() {
+interface hamMenuType {
+  status: boolean;
+  closeActivity: () => void;
+}
+function MobileHeader({ status, closeActivity }: hamMenuType) {
   return (
-    <Container>
+    <Container
+      style={{
+        transform: status ? "translateX(0%)" : "translateX(-100%)",
+        transition: "all .5s 250ms ease-in-out",
+      }}
+    >
       <section className="top-mobile-header">
-        <span className="close-btn">
+        <span onClick={closeActivity} className="close-btn">
           <MdClose
             style={{
               width: "62px",
