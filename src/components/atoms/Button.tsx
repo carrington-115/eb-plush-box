@@ -74,6 +74,7 @@ const Container = styled.button`
   justify-content: center;
   align-items: center;
   border-radius: 5px;
+  font-family: El Messiri;
   font-size: 16px;
   border: none;
   cursor: pointer;

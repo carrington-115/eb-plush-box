@@ -129,6 +129,7 @@ const Container = styled.section`
   background-color: #cfb7b2;
   @media (min-width: 320px) and (max-width: 599px) {
     padding: 100px 0px 0px 0px;
+    flex-direction: column;
   }
   .inner-section {
     display: flex;
@@ -148,6 +149,7 @@ const Container = styled.section`
         margin-bottom: 50px;
         display: flex;
         gap: 15px;
+        width: 100%;
         .heading-text {
           font-size: 24px;
         }
@@ -164,6 +166,9 @@ const Container = styled.section`
     .step-image {
       width: 45%;
       height: fit-content;
+      @media (min-width: 320px) and (max-width: 599px) {
+        width: 100%;
+      }
       img {
         width: 100%;
         height: 100%;

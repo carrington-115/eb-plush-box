@@ -144,7 +144,7 @@ function MobileHead({
             icon={false}
             status="fill"
             bgColor="rgba(67, 31, 23, 1)"
-            color="rgba(234, 215, 211, 1)"
+            color="white"
             btnAction={setSignInFunc}
           />
         )}
@@ -213,7 +213,7 @@ const MobileHeaderContainer = styled.header`
           top: -10px;
           right: 0;
           background-color: rgba(67, 31, 23, 1);
-          color: rgba(234, 215, 211, 1);
+          color: white;
           display: flex;
           justify-content: center;
           align-items: center;
