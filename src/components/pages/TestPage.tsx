@@ -1,10 +1,20 @@
 import styled from "styled-components";
-import { Header } from "../molecules";
+import { Header, StepSection } from "../molecules";
 
 function TestPage() {
   return (
     <Container>
       <Header />
+      <StepSection
+        title="How to order a Gift box"
+        steps={[
+          "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+          "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+          "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+          "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+          "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+        ]}
+      />
     </Container>
   );
 }
