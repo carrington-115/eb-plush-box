@@ -92,7 +92,7 @@ const Container = styled.section`
         @media (min-width: 320px) and (max-width: 599px) {
           font-size: 64px;
           font-style: normal;
-          font-weight: 800;
+          font-weight: 1000;
         }
       }
       .btn {

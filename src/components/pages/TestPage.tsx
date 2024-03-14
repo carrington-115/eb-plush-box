@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { Header, StepSection, TopHeader } from "../molecules";
+import { Header, ProductComponent, StepSection, TopHeader } from "../molecules";
+import { productOne } from "../../assets";
 
 function TestPage() {
   return (
@@ -16,6 +17,15 @@ function TestPage() {
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
         ]}
       />
+      <div className="products-container">
+        <ProductComponent
+          imageUrl={productOne}
+          productName="Product One"
+          price={500}
+          likeStatus={false}
+          likes={200}
+        />
+      </div>
     </Container>
   );
 }

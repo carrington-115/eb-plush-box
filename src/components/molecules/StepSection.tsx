@@ -3,11 +3,7 @@ import { productImage } from "../../assets";
 import { Button } from "../atoms";
 import { IoAlertSharp } from "react-icons/io5";
 import { IoIosArrowForward } from "react-icons/io";
-
-interface stepsSectionType {
-  title: string;
-  steps: string[];
-}
+import { stepsSectionType } from "../../types/vartypes";
 
 function StepSection({ title, steps }: stepsSectionType) {
   return (

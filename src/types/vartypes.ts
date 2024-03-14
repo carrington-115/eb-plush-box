@@ -18,3 +18,26 @@ export interface btnType {
   status: string;
   shadow?: boolean;
 }
+
+export interface productType {
+  imageUrl: string;
+  productName: string;
+  price: number;
+  likeStatus: boolean;
+  likes: number;
+}
+
+export interface stepsSectionType {
+  title: string;
+  steps: string[];
+}
+
+export interface pageLinkTypes {
+  name: string;
+  to: string;
+}
+
+export interface hamMenuType {
+  status: boolean;
+  closeActivity: () => void;
+}

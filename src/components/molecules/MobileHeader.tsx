@@ -2,21 +2,10 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { MdClose } from "react-icons/md";
 import { Button } from "../atoms";
+import { pageLinkTypes } from "../../types/vartypes";
+import { pageLinks } from "../data";
+import { hamMenuType } from "../../types/vartypes";
 
-interface pageLinkTypes {
-  name: string;
-  to: string;
-}
-const pageLinks: pageLinkTypes[] = [
-  { name: "Home", to: "/home" },
-  { name: "Shopping", to: "/shop" },
-  { name: "About us", to: "/about" },
-  { name: "Contact us", to: "/contact" },
-];
-interface hamMenuType {
-  status: boolean;
-  closeActivity: () => void;
-}
 function MobileHeader({ status, closeActivity }: hamMenuType) {
   return (
     <Container
