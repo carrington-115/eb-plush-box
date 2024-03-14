@@ -125,24 +125,25 @@ const Container = styled.section`
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 100px 50px 0px 50px;
+  padding: 100px 50px 0px 0px;
   background-color: #cfb7b2;
   @media (min-width: 320px) and (max-width: 599px) {
-    padding: 100px 20px 0px 20px;
+    padding: 100px 0px 0px 0px;
   }
   .inner-section {
     display: flex;
+    width: 80%;
+    justify-content: space-between;
     @media (min-width: 320px) and (max-width: 599px) {
       flex-direction: column;
       width: 90%;
     }
-    justify-content: space-between;
-    width: 90%;
     align-items: flex-end;
     .steps {
       display: flex;
       flex-direction: column;
-
+      padding-bottom: 50px;
+      width: 50%;
       @media (min-width: 320px) and (max-width: 599px) {
         margin-bottom: 50px;
         display: flex;
@@ -161,11 +162,11 @@ const Container = styled.section`
       }
     }
     .step-image {
-      width: auto;
+      width: 45%;
       height: fit-content;
       img {
-        width: 80%;
-        height: 80%;
+        width: 100%;
+        height: 100%;
         @media (min-width: 320px) and (max-width: 599px) {
           width: 90%;
           height: 90%;
