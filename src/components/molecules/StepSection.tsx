@@ -126,9 +126,9 @@ const Container = styled.section`
   align-items: center;
   width: 100%;
   padding: 100px 50px 0px 50px;
-
+  background-color: #cfb7b2;
   @media (min-width: 320px) and (max-width: 599px) {
-    padding: 100px 20px;
+    padding: 100px 20px 0px 20px;
   }
   .inner-section {
     display: flex;
