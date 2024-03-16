@@ -1,6 +1,12 @@
 import styled from "styled-components";
-import { Header, ProductComponent, StepSection, TopHeader } from "../molecules";
-import { productOne } from "../../assets";
+import {
+  Header,
+  ProductComponent,
+  StepSection,
+  Testimonial,
+  TopHeader,
+} from "../molecules";
+import { personOne, productOne } from "../../assets";
 
 function TestPage() {
   return (
@@ -24,6 +30,16 @@ function TestPage() {
           price={500}
           likeStatus={false}
           likes={200}
+        />
+      </div>
+      <div>
+        <Testimonial
+          profileImage={personOne}
+          testifierMessage={{
+            name: "Testifer name",
+            message:
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ",
+          }}
         />
       </div>
     </Container>

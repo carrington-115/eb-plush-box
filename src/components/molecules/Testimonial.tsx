@@ -19,10 +19,17 @@ export default Testimonial;
 
 const Container = styled.section`
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  position: relative;
+  color: rgba(67, 31, 23, 1);
+  margin: 2cm 1cm;
   .testimonial-image {
     position: absolute;
-    top: 0;
-    right: 50%;
+    top: -40px;
     img {
       width: 100%;
       height: 100%;
@@ -33,8 +40,12 @@ const Container = styled.section`
     flex-direction: column;
     gap: 10px;
     align-items: center;
-    position: absolute;
-    bottom: 0;
+    padding: 70px 20px 20px 20px;
+    border-radius: 40px;
+    background: #faf4ed;
+    &:hover {
+      background: #ead7d3;
+    }
     h2 {
       font-size: 22px;
       font-style: normal;
@@ -45,6 +56,7 @@ const Container = styled.section`
       font-style: normal;
       font-weight: 500;
       line-height: 24px;
+      text-align: center;
     }
   }
 `;
