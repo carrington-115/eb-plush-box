@@ -41,3 +41,13 @@ export interface hamMenuType {
   status: boolean;
   closeActivity: () => void;
 }
+
+export type testimonialMessage = {
+  name: string;
+  message: string;
+};
+
+export interface testimonyType {
+  profileImage: string;
+  testifierMessage: testimonialMessage;
+}
