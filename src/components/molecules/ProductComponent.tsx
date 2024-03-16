@@ -14,8 +14,8 @@ function ProductComponent({
 
   useEffect(() => {
     setTimeout(() => {
-      setLoading(true);
-    });
+      setLoading(false);
+    }, 1000);
   }, []);
 
   if (loading) {
@@ -26,17 +26,24 @@ function ProductComponent({
       <section className="product-inner-section">
         <div className="product-image">
           <img src={imageUrl} alt={productName} />
-          <p>{productName}</p>
-          <div className="product-like-section">
-            <span>
-              $ <p>{price}</p>
+        </div>
+        <p className="product-name">{productName}</p>
+        <div className="product-details-section">
+          <span className="product-price">
+            <p>$ {price}</p>
+          </span>
+          <div className="like-section">
+            <span className="product-like-btn">
+              <FcLike
+                style={{
+                  width: "24px",
+                  height: "24px",
+                  padding: "10px",
+                  backgroundColor: likeStatus ? "#6539303b" : "transparent",
+                }}
+              />
             </span>
-            <div className="like-section">
-              <span className="product-like-btn">
-                <FcLike />
-              </span>
-              {likeStatus ? likes : 0}
-            </div>
+            <p>{likes}</p>
           </div>
         </div>
       </section>
@@ -48,28 +55,154 @@ export default ProductComponent;
 function ComponentSkeleton() {
   return (
     <SkeletonContainer>
-      <div>
-        <span className="img-skeleton" />
-        <span className="prod-name" />
-        <div>
-          <span className="like-section">
-            <span className="like-btn">
-              <FcLike style={{ width: "24px", height: "24px" }} />
-            </span>
-            <span className="like-number" />
+      <span className="img-skeleton" />
+      <span className="prod-name" />
+      <div className="details-section">
+        <span className="price" />
+        <div className="like-section">
+          <span className="like-btn">
+            <FcLike
+              style={{ width: "24px", height: "24px", color: "grey" }}
+              fill="grey"
+            />
           </span>
+          <span className="like-number" />
         </div>
       </div>
     </SkeletonContainer>
   );
 }
-const Container = styled.section``;
+const Container = styled.section`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 20px;
+  border-radius: 40px;
+  background-color: #f7efed;
+  width: fit-content;
+  color: black;
+  @media (min-width: 320px) and (max-width: 599px) {
+    padding: 15px 5px;
+    border-radius: 30px;
+    width: 45vw;
+  }
+  &:hover {
+    background-color: #ead7d3;
+  }
+  cursor: pointer;
+  .product-inner-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 95%;
+    @media (min-width: 320px) and (max-width: 599px) {
+      width: 90%;
+    }
+    .product-image {
+      @media (min-width: 320px) and (max-width: 599px) {
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .product-name {
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 28px;
+      @media (min-width: 320px) and (max-width: 599px) {
+        font-size: 18px;
+      }
+    }
+    .product-details-section {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 28px;
+      @media (min-width: 320px) and (max-width: 599px) {
+        font-size: 18px;
+        justify-content: space-between;
+      }
+      .product-price {
+      }
+      .like-section {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        .product-like-btn {
+          background-color: transparent;
+          padding: 5px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          @media (min-width: 320px) and (max-width: 599px) {
+            padding: 2px;
+          }
+          &:hover {
+            background-color: #6539303b;
+          }
+        }
+        p {
+        }
+      }
+    }
+  }
+`;
 
 const SkeletonContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 10px;
+  padding: 10px;
+  width: fit-content;
+  margin: 20px;
+  border-radius: 10px;
+  background-color: #d4d4d468;
   span {
-    background-color: grey;
+    background-color: #d4d4d4;
+    height: 10px;
+    border-radius: 10px;
+  }
+  .img-skeleton {
+    width: 200px;
+    height: 200px;
+  }
+  .prod-name {
+    width: 200px;
+    height: 20px;
+  }
+  .details-section {
+    display: flex;
+    justify-content: flex-start;
+    gap: 50px;
+    .price {
+      width: 50px;
+      height: 20px;
+    }
+    .like-section {
+      display: flex;
+      align-items: center;
+      .like-btn {
+        padding: 5px;
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .like-number {
+        width: 40px;
+        height: 20px;
+      }
+    }
   }
 `;

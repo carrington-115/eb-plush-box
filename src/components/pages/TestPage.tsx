@@ -37,4 +37,7 @@ const Container = styled.div`
   background-color: #fbf7f6;
   display: flex;
   flex-direction: column;
+  .products-container {
+    width: 100%;
+  }
 `;
