@@ -7,6 +7,7 @@ import {
   TopHeader,
 } from "../molecules";
 import { personOne, productOne } from "../../assets";
+import { ProductGridSection } from "../organisms";
 
 function TestPage() {
   return (
@@ -42,6 +43,36 @@ function TestPage() {
           }}
         />
       </div>
+      <ProductGridSection rightBarActive={true}>
+        <ProductComponent
+          imageUrl={productOne}
+          productName="Product One"
+          price={500}
+          likeStatus={false}
+          likes={200}
+        />
+        <ProductComponent
+          imageUrl={productOne}
+          productName="Product One"
+          price={500}
+          likeStatus={false}
+          likes={200}
+        />
+        <ProductComponent
+          imageUrl={productOne}
+          productName="Product One"
+          price={500}
+          likeStatus={false}
+          likes={200}
+        />
+        <ProductComponent
+          imageUrl={productOne}
+          productName="Product One"
+          price={500}
+          likeStatus={false}
+          likes={200}
+        />
+      </ProductGridSection>
     </Container>
   );
 }

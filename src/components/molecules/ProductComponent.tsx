@@ -36,9 +36,6 @@ function ProductComponent({
             <span className="product-like-btn">
               <FcLike
                 style={{
-                  width: "24px",
-                  height: "24px",
-                  padding: "10px",
                   backgroundColor: likeStatus ? "#6539303b" : "transparent",
                 }}
               />
@@ -82,7 +79,7 @@ const Container = styled.section`
   width: fit-content;
   color: black;
   @media (min-width: 320px) and (max-width: 599px) {
-    padding: 15px 5px;
+    padding: 15px 2.5px;
     border-radius: 30px;
     width: 45vw;
   }
@@ -142,10 +139,19 @@ const Container = styled.section`
           padding: 5px;
           display: flex;
           justify-content: center;
-          align-items: center;
+          align-items: flex-end;
           border-radius: 50%;
-          @media (min-width: 320px) and (max-width: 599px) {
-            padding: 2px;
+
+          img,
+          svg {
+            width: 24px;
+            height: 24px;
+            padding: 10px;
+            @media (min-width: 320px) and (max-width: 599px) {
+              width: 20px;
+              height: 18px;
+              padding: 2.5px;
+            }
           }
           &:hover {
             background-color: #6539303b;

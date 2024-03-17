@@ -42,12 +42,12 @@ export interface hamMenuType {
   closeActivity: () => void;
 }
 
-export type testimonialMessage = {
+export type testimonialMessageType = {
   name: string;
   message: string;
 };
 
 export interface testimonyType {
   profileImage: string;
-  testifierMessage: testimonialMessage;
+  testifierMessage: testimonialMessageType;
 }
