@@ -5,7 +5,7 @@ import { IoMdClose } from "react-icons/io";
 
 interface inputFieldType {
   type: string;
-  inputType: string;
+  inputType?: string;
   placeholder?: string;
   inputName: string;
   dropDown?: dropDownValues;
@@ -25,6 +25,12 @@ function UserInput({
 }: inputFieldType) {
   const [searchValue, setSearchValue] = useState<string>("");
   const [onSearch, setOnSearch] = useState<boolean>(false);
+
+  function setEmptySearch() {
+    if (onSearch === true) {
+      setSearchValue("");
+    }
+  }
 
   useEffect(() => {
     function checkIfUserSearch() {
@@ -60,14 +66,14 @@ function UserInput({
             value={searchValue}
             onChange={(e) => setSearchValue(e.target.value)}
           />
-          <span className="search-icon">
-            {onSearch ? (
-              <IoMdClose fill="rgba(67, 31, 23, 1)" />
-            ) : (
-              <IoIosSearch fill="rgba(67, 31, 23, 1)" />
-            )}
-          </span>
         </div>
+        <span className="search-icon" onClick={setEmptySearch}>
+          {onSearch ? (
+            <IoMdClose fill="rgba(67, 31, 23, 1)" />
+          ) : (
+            <IoIosSearch fill="rgba(67, 31, 23, 1)" />
+          )}
+        </span>
       </div>
     );
   } else if (type === "checkbox") {

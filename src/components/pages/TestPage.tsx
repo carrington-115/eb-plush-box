@@ -82,6 +82,7 @@ function TestPage() {
           alignItems: "center",
           backgroundColor: "rgba(67, 31, 23, 1)",
           padding: "40px 20px",
+          gap: "30px",
         }}
       >
         <UserInput
@@ -90,6 +91,8 @@ function TestPage() {
           inputType="text"
           inputName="name"
         />
+        <UserInput type="multiline" placeholder="Message" inputName="message" />
+        <UserInput type="search" placeholder="Search" inputName="search" />
       </div>
     </Container>
   );
