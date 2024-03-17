@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import styled from "styled-components";
 
 function ProductGridSection({
@@ -8,14 +8,23 @@ function ProductGridSection({
   rightBarActive: boolean;
   children: ReactNode;
 }) {
+  const [isSmallScreen, setIsSmallScreen] = useState<boolean>(false);
+
+  useEffect(() => {
+    window.addEventListener("resize", () =>
+      setIsSmallScreen(window.matchMedia("(max-width: 600px)").matches)
+    );
+  }, [isSmallScreen]);
+
   return (
     <Container>
       <div
         className="inner-grid"
         style={{
-          gridTemplateColumns: rightBarActive
-            ? "repeat(2, 1fr)"
-            : "repeat(4, 1fr)",
+          gridTemplateColumns:
+            rightBarActive || isSmallScreen
+              ? "repeat(2, 1fr)"
+              : "repeat(4, 1fr)",
         }}
       >
         {children}

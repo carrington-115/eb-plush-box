@@ -43,7 +43,7 @@ function TestPage() {
           }}
         />
       </div>
-      <ProductGridSection rightBarActive={true}>
+      <ProductGridSection rightBarActive={false}>
         <ProductComponent
           imageUrl={productOne}
           productName="Product One"
