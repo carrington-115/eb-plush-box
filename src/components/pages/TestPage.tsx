@@ -8,6 +8,7 @@ import {
 } from "../molecules";
 import { personOne, productOne } from "../../assets";
 import { ProductGridSection } from "../organisms";
+import { UserInput } from "../atoms";
 
 function TestPage() {
   return (
@@ -73,6 +74,23 @@ function TestPage() {
           likes={200}
         />
       </ProductGridSection>
+      <div
+        style={{
+          width: "80%",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          backgroundColor: "rgba(67, 31, 23, 1)",
+          padding: "40px 20px",
+        }}
+      >
+        <UserInput
+          type="simple"
+          placeholder="Name"
+          inputType="text"
+          inputName="name"
+        />
+      </div>
     </Container>
   );
 }

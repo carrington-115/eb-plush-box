@@ -12,7 +12,7 @@ function ProductGridSection({
 
   useEffect(() => {
     window.addEventListener("resize", () =>
-      setIsSmallScreen(window.matchMedia("(max-width: 600px)").matches)
+      setIsSmallScreen(window.matchMedia("(max-width: 599px)").matches)
     );
   }, [isSmallScreen]);
 
