@@ -27,17 +27,20 @@ function ProductSlider({ sliderContent }: { sliderContent: string[] }) {
 export default ProductSlider;
 
 const Container = styled(Slider)`
-  width: 45%;
+  width: 40%;
   button,
   .slick-arrow {
     display: flex;
     justify-content: center;
     align-items: center;
     fill: black;
-    background-color: rgba(244, 233, 218, 1);
+    background-color: rgba(207, 183, 178, 1);
     width: auto;
     height: auto;
     border-radius: 50%;
+    &:hover {
+      background-color: rgba(141, 104, 97, 1);
+    }
   }
   .slick-prev,
   .slick-next {

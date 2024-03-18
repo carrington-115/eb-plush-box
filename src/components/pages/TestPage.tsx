@@ -10,7 +10,7 @@ import {
 } from "../molecules";
 import { personOne, productOne, sliderImage } from "../../assets";
 import { ProductGridSection } from "../organisms";
-import { UserInput } from "../atoms";
+import { ProductDetails, UserInput } from "../atoms";
 
 function TestPage() {
   return (
@@ -116,6 +116,17 @@ function TestPage() {
       </div>
       <div style={{ margin: "2cm" }}>
         <ProductSlider sliderContent={[sliderImage, sliderImage]} />
+      </div>
+      <div style={{ margin: "2cm" }}>
+        <ProductDetails
+          listContent={[
+            "Lorem ipsum dolor sit amet consectetur",
+            "Lorem ipsum dolor sit amet consectetur",
+            "Lorem ipsum dolor sit amet consectetur",
+            "Lorem ipsum dolor sit amet consectetur",
+            "Lorem ipsum dolor sit amet consectetur",
+          ]}
+        />
       </div>
     </Container>
   );
