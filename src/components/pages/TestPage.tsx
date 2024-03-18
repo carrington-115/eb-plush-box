@@ -3,14 +3,13 @@ import {
   AccordionElement,
   Header,
   ProductComponent,
-  ProductSlider,
   StepSection,
   Testimonial,
   TopHeader,
 } from "../molecules";
-import { personOne, productOne, sliderImage } from "../../assets";
-import { ProductGridSection } from "../organisms";
-import { ProductDetails, UserInput } from "../atoms";
+import { personOne, productOne } from "../../assets";
+import { ProductGridSection, ProductViewer } from "../organisms";
+import { UserInput } from "../atoms";
 
 function TestPage() {
   return (
@@ -114,20 +113,7 @@ function TestPage() {
                   voluptates rem fugiat quam atque."
         />
       </div>
-      <div style={{ margin: "2cm" }}>
-        <ProductSlider sliderContent={[sliderImage, sliderImage]} />
-      </div>
-      <div style={{ margin: "2cm" }}>
-        <ProductDetails
-          listContent={[
-            "Lorem ipsum dolor sit amet consectetur",
-            "Lorem ipsum dolor sit amet consectetur",
-            "Lorem ipsum dolor sit amet consectetur",
-            "Lorem ipsum dolor sit amet consectetur",
-            "Lorem ipsum dolor sit amet consectetur",
-          ]}
-        />
-      </div>
+      <ProductViewer display={true} />
     </Container>
   );
 }

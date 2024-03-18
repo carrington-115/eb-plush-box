@@ -38,6 +38,7 @@ const Container = styled.section`
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 100%;
   .top-heading {
     display: flex;
     align-items: center;

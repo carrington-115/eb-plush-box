@@ -27,7 +27,7 @@ function ProductSlider({ sliderContent }: { sliderContent: string[] }) {
 export default ProductSlider;
 
 const Container = styled(Slider)`
-  width: 40%;
+  width: 100%;
   button,
   .slick-arrow {
     display: flex;
@@ -51,13 +51,13 @@ const Container = styled(Slider)`
   }
   .slick-next::before,
   .slick-prev::before {
-    font-size: 36px;
+    font-size: 16px;
   }
   .slick-next {
-    right: -50px;
+    right: -30px;
   }
   .slick-prev {
-    left: -50px;
+    left: -30px;
   }
 
   .slider-image {
