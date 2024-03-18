@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 import { IoMdCart } from "react-icons/io";
 import MobileHeader from "./MobileHeader";
 import { RiMenu2Line } from "react-icons/ri";
+import { mobileHeadType } from "../../types/vartypes";
 
 function Header() {
   const [signedIn, setSignedIn] = useState<boolean>(false);
@@ -95,15 +96,6 @@ function Header() {
 }
 export default Header;
 
-interface mobileHeadType {
-  signInStatus: boolean;
-  menuActivity: () => void;
-  setSignInFunc: () => void;
-  setOrderFunc: () => void;
-  orderNumber: number;
-  userNameInitial: string;
-}
-
 function MobileHead({
   signInStatus,
   menuActivity,
@@ -163,6 +155,7 @@ const MobileHeaderContainer = styled.header`
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
     &:hover {
       background-color: rgba(251, 247, 246, 1);
     }
@@ -179,7 +172,6 @@ const MobileHeaderContainer = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2px 100px;
   .second-part {
     width: 40%;
     justify-self: flex-end;

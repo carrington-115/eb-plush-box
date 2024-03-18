@@ -11,7 +11,7 @@ function MobileHeader({ status, closeActivity }: hamMenuType) {
     <Container
       style={{
         transform: status ? "translateX(0%)" : "translateX(-100%)",
-        transition: "all .5s 250ms ease-in-out",
+        transition: "all 0.5s 250ms ease-in-out",
       }}
     >
       <section className="top-mobile-header">
@@ -21,6 +21,7 @@ function MobileHeader({ status, closeActivity }: hamMenuType) {
               width: "62px",
               height: "62px",
               fill: "rgba(67, 31, 23, 1)",
+              cursor: "pointer",
             }}
           />
         </span>

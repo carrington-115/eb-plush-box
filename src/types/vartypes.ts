@@ -74,3 +74,12 @@ export interface accordionType {
   title: string;
   message: string;
 }
+
+export interface mobileHeadType {
+  signInStatus: boolean;
+  menuActivity: () => void;
+  setSignInFunc: () => void;
+  setOrderFunc: () => void;
+  orderNumber: number;
+  userNameInitial: string;
+}

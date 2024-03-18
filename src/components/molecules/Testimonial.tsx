@@ -27,6 +27,9 @@ const Container = styled.section`
   position: relative;
   color: rgba(67, 31, 23, 1);
   margin: 2cm 1cm;
+  @media (min-width: 320px) and (max-width: 599px) {
+    width: 80%;
+  }
   .testimonial-image {
     position: absolute;
     top: -40px;

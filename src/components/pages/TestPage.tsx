@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {
+  AccordionElement,
   Header,
   ProductComponent,
   StepSection,
@@ -101,6 +102,15 @@ function TestPage() {
             dropDownName: "Countries",
             dropDownValues: ["Cameroon", "Nigeria", "Congo"],
           }}
+        />
+      </div>
+
+      <div style={{ width: "60%", display: "flex", flexDirection: "column" }}>
+        <AccordionElement
+          title="Lorem ipsum dolor sit amet consectetur?"
+          message="adipisicing elit. Aut, culpa! Ab quisquam repellat molestias sit sunt, quo
+                  suscipit corporis ipsa debitis! Exercitationem labore saepe pariatur
+                  voluptates rem fugiat quam atque."
         />
       </div>
     </Container>
