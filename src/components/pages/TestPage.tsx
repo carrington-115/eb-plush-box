@@ -105,7 +105,7 @@ function TestPage() {
         />
       </div>
 
-      <div style={{ width: "60%", display: "flex", flexDirection: "column" }}>
+      <div style={{ display: "flex", flexDirection: "column" }}>
         <AccordionElement
           title="Lorem ipsum dolor sit amet consectetur?"
           message="adipisicing elit. Aut, culpa! Ab quisquam repellat molestias sit sunt, quo
