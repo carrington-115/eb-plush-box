@@ -3,11 +3,12 @@ import {
   AccordionElement,
   Header,
   ProductComponent,
+  ProductSlider,
   StepSection,
   Testimonial,
   TopHeader,
 } from "../molecules";
-import { personOne, productOne } from "../../assets";
+import { personOne, productOne, sliderImage } from "../../assets";
 import { ProductGridSection } from "../organisms";
 import { UserInput } from "../atoms";
 
@@ -112,6 +113,9 @@ function TestPage() {
                   suscipit corporis ipsa debitis! Exercitationem labore saepe pariatur
                   voluptates rem fugiat quam atque."
         />
+      </div>
+      <div style={{ margin: "2cm" }}>
+        <ProductSlider sliderContent={[sliderImage, sliderImage]} />
       </div>
     </Container>
   );

@@ -83,3 +83,12 @@ export interface mobileHeadType {
   orderNumber: number;
   userNameInitial: string;
 }
+
+export interface sliderType {
+  dots: boolean;
+  infinite: boolean;
+  speed: number;
+  slidesToShow: number;
+  slidesToScroll: number;
+  lazyload: boolean;
+}

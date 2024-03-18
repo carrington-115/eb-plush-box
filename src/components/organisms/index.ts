@@ -1,4 +1,5 @@
 import ProductGridSection from "./ProductGridSection";
 import Accordion from "./Accordion";
+import ProductViewer from "./ProductViewer";
 
-export { ProductGridSection, Accordion };
+export { ProductGridSection, Accordion, ProductViewer };

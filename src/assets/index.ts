@@ -6,6 +6,7 @@ import productTwo from "./products/product2.svg";
 import productThree from "./products/product3.svg";
 import productFour from "./products/product4.svg";
 import personOne from "./testimonials/person1.svg";
+import sliderImage from "./slider-image.svg";
 
 export {
   logo,
@@ -16,4 +17,5 @@ export {
   productThree,
   productFour,
   personOne,
+  sliderImage,
 };
