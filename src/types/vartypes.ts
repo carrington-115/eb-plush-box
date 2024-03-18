@@ -51,3 +51,26 @@ export interface testimonyType {
   profileImage: string;
   testifierMessage: testimonialMessageType;
 }
+
+export interface inputFieldType {
+  type: string;
+  inputType?: string;
+  placeholder?: string;
+  inputName: string;
+  dropDown?: dropDownValuesType;
+}
+
+export type dropDownValuesType = {
+  dropDownName: string;
+  dropDownValues: string[];
+};
+
+export interface rateInputType {
+  unRated: ReactNode;
+  rated: ReactNode;
+}
+
+export interface accordionType {
+  title: string;
+  message: string;
+}

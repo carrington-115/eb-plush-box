@@ -1,27 +1,10 @@
-import { ReactNode, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "../../app/design/inputStyle.css";
 import { IoIosSearch } from "react-icons/io";
 import { IoMdClose } from "react-icons/io";
 import { MdOutlineStarRate } from "react-icons/md";
 import { MdStarRate } from "react-icons/md";
-
-interface inputFieldType {
-  type: string;
-  inputType?: string;
-  placeholder?: string;
-  inputName: string;
-  dropDown?: dropDownValues;
-}
-
-type dropDownValues = {
-  dropDownName: string;
-  dropDownValues: string[];
-};
-
-interface rateInputType {
-  unRated: ReactNode;
-  rated: ReactNode;
-}
+import { inputFieldType, rateInputType } from "../../types/vartypes";
 
 const rateInputValues: rateInputType[] = [
   { unRated: <MdOutlineStarRate />, rated: <MdStarRate /> },
