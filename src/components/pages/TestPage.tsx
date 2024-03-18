@@ -93,6 +93,15 @@ function TestPage() {
         />
         <UserInput type="multiline" placeholder="Message" inputName="message" />
         <UserInput type="search" placeholder="Search" inputName="search" />
+        <UserInput type="checkbox" placeholder="Python" inputName="Python" />
+        <UserInput
+          type="dropdown"
+          inputName="countries-dropdown"
+          dropDown={{
+            dropDownName: "Countries",
+            dropDownValues: ["Cameroon", "Nigeria", "Congo"],
+          }}
+        />
       </div>
     </Container>
   );

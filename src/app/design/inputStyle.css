@@ -59,6 +59,45 @@
   height: 24px;
 }
 .checkbox-input {
+  display: flex;
+  gap: 10px;
 }
+
+.checkbox-input input {
+  width: 20px;
+  height: 20px;
+  background-color: rgba(67, 31, 23, 1);
+}
+
+.checkbox-input label {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
 .dropdown-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18.226px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 27.34px;
+  width: 100%;
+  padding: 13px 20px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.dropdown-input select {
+  font-size: 18.226px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 27.34px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border: none;
+  outline: none;
 }
