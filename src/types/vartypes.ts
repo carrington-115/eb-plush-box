@@ -41,3 +41,63 @@ export interface hamMenuType {
   status: boolean;
   closeActivity: () => void;
 }
+
+export type testimonialMessageType = {
+  name: string;
+  message: string;
+};
+
+export interface testimonyType {
+  profileImage: string;
+  testifierMessage: testimonialMessageType;
+}
+
+export interface inputFieldType {
+  type: string;
+  inputType?: string;
+  placeholder?: string;
+  inputName: string;
+  dropDown?: dropDownValuesType;
+}
+
+export type dropDownValuesType = {
+  dropDownName: string;
+  dropDownValues: string[];
+};
+
+export interface rateInputType {
+  unRated: ReactNode;
+  rated: ReactNode;
+}
+
+export interface accordionType {
+  title: string;
+  message: string;
+}
+
+export interface mobileHeadType {
+  signInStatus: boolean;
+  menuActivity: () => void;
+  setSignInFunc: () => void;
+  setOrderFunc: () => void;
+  orderNumber: number;
+  userNameInitial: string;
+}
+
+export interface sliderType {
+  dots: boolean;
+  infinite: boolean;
+  speed: number;
+  slidesToShow: number;
+  slidesToScroll: number;
+  lazyload: boolean;
+}
+
+export interface productViewerType {
+  display: boolean;
+  productPrice: number;
+  title: string;
+  description: string;
+  listDetails: string[];
+  sliderImages: string[];
+}

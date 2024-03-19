@@ -1,0 +1,109 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.simple-input,
+.multiline-input {
+  background-color: white;
+  display: flex;
+  padding: 15px 10px 15px 24px;
+  width: 100%;
+  border-radius: 5px;
+}
+.simple-input input,
+.multiline-input textarea,
+.search-input input {
+  border: none;
+  outline: none;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+  font-family: El Messiri;
+  width: 100%;
+}
+.search-input {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  width: 60vw;
+  border-radius: 5px;
+}
+.search-input .input-section {
+  width: 80%;
+}
+.search-section input {
+  width: 100%;
+}
+.search-input .search-icon {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.search-input .search-icon:hover {
+  background-color: rgba(239, 222, 200, 1);
+}
+
+.search-input .search-icon svg {
+  width: 24px;
+  height: 24px;
+}
+.checkbox-input {
+  display: flex;
+  gap: 10px;
+}
+
+.checkbox-input input {
+  width: 20px;
+  height: 20px;
+  background-color: rgba(67, 31, 23, 1);
+}
+
+.checkbox-input label {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.dropdown-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18.226px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 27.34px;
+  width: 100%;
+  padding: 13px 20px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.dropdown-input select {
+  font-size: 18.226px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 27.34px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.rate-input {
+}
+
+.card-input {
+}
