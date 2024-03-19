@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {
   AccordionElement,
   CartElement,
+  ContactComponent,
   Header,
   ProductComponent,
   StepSection,
@@ -177,6 +178,15 @@ function TestPage() {
           ]}
           totalPrice={2000}
           checkoutBtnAction={() => console.log("remove from cart list")}
+        />
+      </div>
+      <div style={{ margin: "2cm" }}>
+        <ContactComponent
+          name="Customer support"
+          description="Contact us if you want to learn more
+                      About our products and need more
+                      information"
+          btnAction={() => console.log("contact us now")}
         />
       </div>
     </Container>
