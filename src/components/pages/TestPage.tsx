@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {
   AccordionElement,
+  CartElement,
   Header,
   ProductComponent,
   StepSection,
@@ -129,9 +130,13 @@ function TestPage() {
         productPrice={500}
         sliderImages={[sliderImage, sliderImage, sliderImage]}
       />
-      <div
-        style={{ width: "100%", display: "flex", justifyContent: "center" }}
-      ></div>
+      <div style={{ width: "100%", display: "flex", justifyContent: "center" }}>
+        <CartElement
+          productImage={productOne}
+          productName="Product one"
+          productPrice={500}
+        />
+      </div>
     </Container>
   );
 }
