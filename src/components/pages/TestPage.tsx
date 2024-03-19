@@ -11,7 +11,8 @@ import {
 } from "../molecules";
 import { personOne, productOne, sliderImage } from "../../assets";
 import { CartList, ProductGridSection, ProductViewer } from "../organisms";
-import { UserInput } from "../atoms";
+import { ThirdPartySignIn, UserInput } from "../atoms";
+import { FaGoogle } from "react-icons/fa";
 
 function TestPage() {
   return (
@@ -187,6 +188,11 @@ function TestPage() {
                       About our products and need more
                       information"
           btnAction={() => console.log("contact us now")}
+        />
+        <ThirdPartySignIn
+          icon={<FaGoogle />}
+          name="Sign in with Google"
+          btnAction={() => console.log("This is a 3rd party sign in btn")}
         />
       </div>
     </Container>

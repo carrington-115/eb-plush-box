@@ -18,6 +18,10 @@ const Container = styled.button`
   border-radius: 100px;
   border: 1px solid #431f17;
   background: rgba(67, 31, 23, 0.1);
+  cursor: pointer;
+  &:hover {
+    background: rgba(67, 31, 23, 0.2);
+  }
   gap: 12px;
   .btn-icon {
     display: flex;
@@ -31,9 +35,10 @@ const Container = styled.button`
   }
   .btn-name {
     color: #431f17;
+    font-family: "El Messiri";
     font-size: 16px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 800;
     line-height: 24px;
   }
 `;
