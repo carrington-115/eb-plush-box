@@ -125,3 +125,9 @@ export interface cartListPropsType {
   totalPrice: number;
   checkoutBtnAction: () => void;
 }
+
+export interface contactCompPropsType {
+  name: string;
+  description: string;
+  btnAction: () => void;
+}
