@@ -65,10 +65,14 @@ const Container = styled.section`
   align-items: center;
   width: 35%;
   padding: 50px 40px;
-  margin: 2cm;
   gap: 25px;
   background-color: rgba(244, 233, 218, 1);
   border-radius: 36px;
+  @media (min-width: 320px) and (max-width: 599px) {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    padding: 30px 40px;
+  }
   .header {
     width: 100%;
     display: flex;
@@ -81,7 +85,9 @@ const Container = styled.section`
       align-items: center;
       cursor: pointer;
       border-radius: 50%;
-
+      @media (min-width: 320px) and (max-width: 599px) {
+        padding: 5px 10px;
+      }
       &:hover {
         background-color: rgba(101, 57, 48, 0.15);
       }
@@ -89,6 +95,9 @@ const Container = styled.section`
         width: 36px;
         height: 36px;
         fill: rgba(101, 57, 48, 1);
+        @media (min-width: 320px) and (max-width: 599px) {
+          width: 24px;
+        }
       }
     }
   }

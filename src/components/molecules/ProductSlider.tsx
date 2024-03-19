@@ -28,7 +28,10 @@ export default ProductSlider;
 
 const Container = styled(Slider)`
   width: 100%;
-  button,
+
+  @media (min-width: 320px) and (max-width: 599px) {
+    width: 100%;
+  }
   .slick-arrow {
     display: flex;
     justify-content: center;
