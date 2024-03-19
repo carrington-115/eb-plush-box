@@ -101,3 +101,33 @@ export interface productViewerType {
   listDetails: string[];
   sliderImages: string[];
 }
+
+export interface stepCompPropsType {
+  number: number;
+  title: string;
+}
+
+export interface cartProductType {
+  productImage: string;
+  productName: string;
+  productPrice: number;
+}
+
+export interface cartListElementPropsType {
+  readonly id: string;
+  image: string;
+  name: string;
+  price: number;
+  removeElementAction: () => void;
+}
+export interface cartListPropsType {
+  cartProducts: cartListElementPropsType[];
+  totalPrice: number;
+  checkoutBtnAction: () => void;
+}
+
+export interface contactCompPropsType {
+  name: string;
+  description: string;
+  btnAction: () => void;
+}
