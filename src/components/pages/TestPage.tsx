@@ -9,7 +9,7 @@ import {
   TopHeader,
 } from "../molecules";
 import { personOne, productOne, sliderImage } from "../../assets";
-import { ProductGridSection, ProductViewer } from "../organisms";
+import { CartList, ProductGridSection, ProductViewer } from "../organisms";
 import { UserInput } from "../atoms";
 
 function TestPage() {
@@ -135,6 +135,48 @@ function TestPage() {
           productImage={productOne}
           productName="Product one new product"
           productPrice={500}
+        />
+      </div>
+      <div
+        style={{
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+          alignContent: "center",
+        }}
+      >
+        <CartList
+          cartProducts={[
+            {
+              id: "24ajfladkda-3",
+              image: productOne,
+              name: "Product one",
+              price: 500,
+              removeElementAction: function () {
+                console.log("remove from list");
+              },
+            },
+            {
+              id: "24ajfladkda-3",
+              image: productOne,
+              name: "Product one",
+              price: 500,
+              removeElementAction: function () {
+                console.log("remove from list");
+              },
+            },
+            {
+              id: "24ajfladkda-3",
+              image: productOne,
+              name: "Product one",
+              price: 500,
+              removeElementAction: function () {
+                console.log("remove from list");
+              },
+            },
+          ]}
+          totalPrice={2000}
+          checkoutBtnAction={() => console.log("remove from cart list")}
         />
       </div>
     </Container>

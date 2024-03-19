@@ -112,3 +112,16 @@ export interface cartProductType {
   productName: string;
   productPrice: number;
 }
+
+export interface cartListElementPropsType {
+  readonly id: string;
+  image: string;
+  name: string;
+  price: number;
+  removeElementAction: () => void;
+}
+export interface cartListPropsType {
+  cartProducts: cartListElementPropsType[];
+  totalPrice: number;
+  checkoutBtnAction: () => void;
+}
