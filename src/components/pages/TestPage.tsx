@@ -129,6 +129,9 @@ function TestPage() {
         productPrice={500}
         sliderImages={[sliderImage, sliderImage, sliderImage]}
       />
+      <div
+        style={{ width: "100%", display: "flex", justifyContent: "center" }}
+      ></div>
     </Container>
   );
 }

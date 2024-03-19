@@ -5,6 +5,7 @@ import ProductComponent from "./ProductComponent";
 import Testimonial from "./Testimonial";
 import AccordionElement from "./AccordionElement";
 import ProductSlider from "./ProductSlider";
+import CartElement from "./CartElement";
 
 export {
   Header,
@@ -14,4 +15,5 @@ export {
   Testimonial,
   AccordionElement,
   ProductSlider,
+  CartElement,
 };
