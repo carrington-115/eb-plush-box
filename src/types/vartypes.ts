@@ -101,3 +101,14 @@ export interface productViewerType {
   listDetails: string[];
   sliderImages: string[];
 }
+
+export interface stepCompPropsType {
+  number: number;
+  title: string;
+}
+
+export interface cartProductType {
+  productImage: string;
+  productName: string;
+  productPrice: number;
+}
