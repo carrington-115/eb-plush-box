@@ -131,3 +131,9 @@ export interface contactCompPropsType {
   description: string;
   btnAction: () => void;
 }
+
+export interface thirdPartyBtnPropsType {
+  icon: ReactNode;
+  name: string;
+  btnAction: () => void;
+}
