@@ -133,7 +133,7 @@ function TestPage() {
       <div style={{ width: "100%", display: "flex", justifyContent: "center" }}>
         <CartElement
           productImage={productOne}
-          productName="Product one"
+          productName="Product one new product"
           productPrice={500}
         />
       </div>

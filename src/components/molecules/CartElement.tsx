@@ -20,7 +20,7 @@ function CartElement({
         <Button
           text={true}
           icon={false}
-          name="Complete the order"
+          name="Complete"
           status="fill"
           color="white"
           bgColor="rgba(67, 31, 23, 1)"
@@ -46,9 +46,19 @@ const Container = styled.div`
   &:hover {
     background-color: rgba(234, 215, 211, 1);
   }
+
+  @media (min-width: 320px) and (max-width: 599px) {
+    width: 95%;
+    padding: 15px 10px;
+  }
   .product-image {
     width: 200px;
     height: 200px;
+    @media (min-width: 320px) and (max-width: 599px) {
+      width: 150px;
+      height: auto;
+    }
+
     img {
       width: 100%;
       height: 100%;
@@ -57,8 +67,14 @@ const Container = styled.div`
   .product-name {
     font-size: 32px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 800;
     line-height: 40px;
+
+    @media (min-width: 320px) and (max-width: 599px) {
+      font-size: 20px;
+      line-height: 24px;
+      margin-left: 20px;
+    }
   }
 
   .product-action {
@@ -66,6 +82,10 @@ const Container = styled.div`
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
+    @media (min-width: 320px) and (max-width: 599px) {
+      gap: 5px;
+    }
+
     .product-price {
       font-size: 24px;
     }
