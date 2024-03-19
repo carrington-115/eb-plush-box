@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Button } from "../atoms";
 import { MdLocalPhone } from "react-icons/md";
-import { contactCompPropType } from "../../types/vartypes";
+import { contactCompPropsType } from "../../types/vartypes";
 
 function ContactComponent({
   name,
@@ -12,7 +12,10 @@ function ContactComponent({
     <Container>
       <div className="head">
         <span>
-          <MdLocalPhone />
+          <MdLocalPhone
+            fill="rgba(67, 31, 23, 1)"
+            style={{ width: "24px", height: "24px" }}
+          />
         </span>
         <h1>{name}</h1>
       </div>
@@ -22,7 +25,12 @@ function ContactComponent({
           text={true}
           icon={true}
           name="Contact us"
-          iconLink={<MdLocalPhone />}
+          iconLink={
+            <MdLocalPhone
+              fill="rgba(67, 31, 23, 1)"
+              style={{ width: "24px", height: "24px" }}
+            />
+          }
           status="fill"
           btnAction={btnAction}
           color=""
@@ -34,4 +42,13 @@ function ContactComponent({
 }
 export default ContactComponent;
 
-const Container = styled.div``;
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 40px;
+  gap: 24px;
+  border-radius: 20px;
+  background: #ead7d3;
+  color: rgba(67, 31, 23, 1);
+`;
