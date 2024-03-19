@@ -7,7 +7,7 @@ import {
   Testimonial,
   TopHeader,
 } from "../molecules";
-import { personOne, productOne } from "../../assets";
+import { personOne, productOne, sliderImage } from "../../assets";
 import { ProductGridSection, ProductViewer } from "../organisms";
 import { UserInput } from "../atoms";
 
@@ -113,7 +113,22 @@ function TestPage() {
                   voluptates rem fugiat quam atque."
         />
       </div>
-      <ProductViewer display={true} />
+      <ProductViewer
+        display={true}
+        title="Product One"
+        description="adipisicing elit. Aut, culpa! Ab quisquam repellat molestias sit sunt, quo
+                  suscipit corporis ipsa debitis! Exercitationem labore saepe pariatur
+                  voluptates rem fugiat quam atque."
+        listDetails={[
+          "Lorem ipsum dolor sit amet consectetur",
+          "Lorem ipsum dolor sit amet consectetur",
+          "Lorem ipsum dolor sit amet consectetur",
+          "Lorem ipsum dolor sit amet consectetur",
+          "Lorem ipsum dolor sit amet consectetur",
+        ]}
+        productPrice={500}
+        sliderImages={[sliderImage, sliderImage, sliderImage]}
+      />
     </Container>
   );
 }

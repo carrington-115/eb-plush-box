@@ -92,3 +92,12 @@ export interface sliderType {
   slidesToScroll: number;
   lazyload: boolean;
 }
+
+export interface productViewerType {
+  display: boolean;
+  productPrice: number;
+  title: string;
+  description: string;
+  listDetails: string[];
+  sliderImages: string[];
+}
