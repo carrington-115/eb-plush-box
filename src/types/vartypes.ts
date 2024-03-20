@@ -142,3 +142,7 @@ export interface formPropsType {
   type: string;
   submitAction: () => void;
 }
+
+export interface accordionPropsType {
+  faqsContent: accordionType[];
+}
