@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { LoginDefSection } from "../atoms";
+import { Button, LoginDefSection } from "../atoms";
 import { Forms } from "../organisms";
 import { useNavigate } from "react-router-dom";
 
@@ -19,6 +19,17 @@ function Signup() {
           type="signUp"
           submitAction={() => console.log("user has signed up")}
         />
+        <div className="action-btn">
+          <Button
+            text={true}
+            icon={false}
+            name="Login instead?"
+            status="text"
+            btnAction={() => navigate("/")}
+            color=""
+            bgColor="rgba(67, 31, 23, 1)"
+          />
+        </div>
       </div>
     </Container>
   );
@@ -39,6 +50,15 @@ const Container = styled.div`
     @media (min-width: 320px) and (max-width: 599px) {
       width: 100%;
       background-color: white;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .action-btn {
+      margin-top: 10px;
+      @media (min-width: 600px) {
+        display: none;
+      }
     }
   }
 
