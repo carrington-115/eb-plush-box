@@ -214,6 +214,10 @@ function TestPage() {
           type="subscribe"
           submitAction={() => console.log("sending the data")}
         />
+        <Forms
+          type="contact"
+          submitAction={() => console.log("sending the data")}
+        />
       </div>
     </Container>
   );

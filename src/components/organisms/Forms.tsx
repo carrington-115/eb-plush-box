@@ -122,7 +122,7 @@ function Forms({ type, submitAction }: formPropsType) {
     );
   } else if (type === "subscribe") {
     return (
-      <div className="subscribe-form">
+      <form onSubmit={(e) => e.preventDefault} className="subscribe-form">
         <h2 className="heading">Subscribe to Our newsletter</h2>
         <UserInput
           type="simple"
@@ -145,10 +145,43 @@ function Forms({ type, submitAction }: formPropsType) {
           color="rgba(251, 247, 246, 1)"
           btnAction={submitAction}
         />
-      </div>
+      </form>
     );
   } else if (type === "contact") {
-    return <div className="contact-form"></div>;
+    return (
+      <div className="login-form">
+        <form onSubmit={(e) => e.preventDefault}>
+          <UserInput
+            type="simple"
+            inputType="text"
+            inputName="name"
+            placeholder="Name"
+          />
+          <UserInput
+            type="simple"
+            inputType="email"
+            inputName="email"
+            placeholder="Email"
+          />
+          <UserInput
+            type="multiline"
+            inputName="message"
+            placeholder="Message"
+          />
+          <Button
+            text={true}
+            icon={false}
+            name="Submit"
+            status="fill"
+            color="rgba(67, 31, 23, 1)"
+            bgColor="rgba(251, 247, 246, 1)"
+            btnAction={submitAction}
+          />
+        </form>
+      </div>
+    );
+  } else if (type === "review") {
+    return <div className="review-form"></div>;
   }
   return <div>Forms</div>;
 }
