@@ -86,7 +86,8 @@
 }
 
 @media (min-width: 320px) and (max-width: 599px) {
-  .login-form {
+  .login-form,
+  .review-form {
     width: 95%;
   }
   .login-form form {
@@ -94,5 +95,12 @@
   }
   .subscribe-form {
     width: 90%;
+  }
+  .rate-btns .rate-icon {
+    padding: 5px;
+  }
+  .rate-icon svg {
+    width: 48px;
+    height: 48px;
   }
 }
