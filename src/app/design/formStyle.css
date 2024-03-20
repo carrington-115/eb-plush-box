@@ -88,12 +88,17 @@
 @media (min-width: 320px) and (max-width: 599px) {
   .login-form,
   .review-form {
-    width: 95%;
+    width: 100%;
   }
   .login-form form {
-    padding: 40px 30px;
+    padding: 40px 20px;
+    border-radius: 0;
   }
 
+  .review-form form {
+    border-radius: 0;
+    padding: 40px 20px;
+  }
   .rate-btns .rate-icon {
     padding: 5px;
   }
