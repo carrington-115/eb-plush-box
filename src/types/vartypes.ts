@@ -137,3 +137,8 @@ export interface thirdPartyBtnPropsType {
   name: string;
   btnAction: () => void;
 }
+
+export interface formPropsType {
+  type: string;
+  submitAction: () => void;
+}

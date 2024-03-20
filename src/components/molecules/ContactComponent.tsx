@@ -13,8 +13,8 @@ function ContactComponent({
       <div className="head">
         <span className="head-icon">
           <MdLocalPhone
+            style={{ width: "30px", height: "30px" }}
             fill="rgba(67, 31, 23, 1)"
-            style={{ width: "48px", height: "48px" }}
           />
         </span>
         <h1 className="head-title">{name}</h1>
@@ -27,8 +27,8 @@ function ContactComponent({
           name="Contact us"
           iconLink={
             <MdLocalPhone
-              fill="#ead7d3"
               style={{ width: "24px", height: "24px" }}
+              fill="#ead7d3"
             />
           }
           status="fill"
@@ -52,10 +52,17 @@ const Container = styled.div`
   background: #ead7d3;
   color: rgba(67, 31, 23, 1);
   width: 35%;
+  @media (min-width: 320px) and (max-width: 599px) {
+    width: 90%;
+    padding: 30px 24px;
+  }
   .head {
     display: flex;
     align-items: center;
     gap: 32px;
+    @media (min-width: 320px) and (max-width: 599px) {
+      gap: 20px;
+    }
     .head-icon {
       display: flex;
       justify-content: center;
@@ -66,6 +73,9 @@ const Container = styled.div`
       font-style: normal;
       font-weight: 700;
       line-height: 40px;
+      @media (min-width: 320px) and (max-width: 599px) {
+        font-size: 24px;
+      }
     }
   }
   .contact-description {

@@ -14,7 +14,7 @@ export default ThirdPartySignIn;
 const Container = styled.button`
   display: flex;
   align-items: center;
-  padding: 5px 12px;
+  padding: 8px 20px;
   border-radius: 100px;
   border: 1px solid #431f17;
   background: rgba(67, 31, 23, 0.1);

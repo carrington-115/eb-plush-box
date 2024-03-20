@@ -10,7 +10,12 @@ import {
   TopHeader,
 } from "../molecules";
 import { personOne, productOne, sliderImage } from "../../assets";
-import { CartList, ProductGridSection, ProductViewer } from "../organisms";
+import {
+  CartList,
+  Forms,
+  ProductGridSection,
+  ProductViewer,
+} from "../organisms";
 import { ThirdPartySignIn, UserInput } from "../atoms";
 import { FaGoogle } from "react-icons/fa";
 
@@ -181,7 +186,7 @@ function TestPage() {
           checkoutBtnAction={() => console.log("remove from cart list")}
         />
       </div>
-      <div style={{ margin: "2cm" }}>
+      <div>
         <ContactComponent
           name="Customer support"
           description="Contact us if you want to learn more
@@ -193,6 +198,13 @@ function TestPage() {
           icon={<FaGoogle />}
           name="Sign in with Google"
           btnAction={() => console.log("This is a 3rd party sign in btn")}
+        />
+      </div>
+
+      <div>
+        <Forms
+          type="login"
+          submitAction={() => console.log("sending the data")}
         />
       </div>
     </Container>

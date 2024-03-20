@@ -1,28 +1,67 @@
+import { Button, ThirdPartySignIn, UserInput } from "../atoms";
+import { FaGoogle, FaFacebook, FaApple } from "react-icons/fa";
+import "../../app/design/formStyle.css";
+import { formPropsType } from "../../types/vartypes";
+
 /*
-    - forms types
-    1. sign in form
-    2. sign up form
-    3. newsletter form
-    4. contact form
-    5. rate forms
-    6. checkout form
+    ** This is the types of form required **
+   1. Login
+   2. Sign up
+   3. newsletter
+   4. rate
+   5. contact
+   6. checkout
 */
 
-function Forms({ status }: { status: string; formSubmitAction: () => void }) {
-  if (status === "login") {
-    return <div></div>;
-  } else if (status === "signup") {
-    return <div></div>;
-  } else if (status === "newsletter") {
-    return <div></div>;
-  } else if (status === "contact") {
-    return <div></div>;
-  } else if (status === "rate") {
-    return <div></div>;
-  } else if (status === "checkout") {
-    return <div></div>;
-  }
+function Forms({ type, submitAction }: formPropsType) {
+  if (type === "login") {
+    return (
+      <div className="login-form">
+        <form onSubmit={(e) => e.preventDefault}>
+          <h3 className="heading">Login to your Account</h3>
+          <UserInput
+            type="simple"
+            inputType="email"
+            inputName="email"
+            placeholder="Email"
+          />
+          <UserInput
+            type="simple"
+            inputType="password"
+            inputName="password"
+            placeholder="Password"
+          />
+          <Button
+            text={true}
+            icon={false}
+            name="Login"
+            status="fill"
+            color="rgba(67, 31, 23, 1)"
+            bgColor="rgba(251, 247, 246, 1)"
+            btnAction={submitAction}
+          />
+        </form>
 
+        <section className="third-party-btns">
+          <ThirdPartySignIn
+            btnAction={() => console.log("sign in with 3rd party")}
+            icon={<FaGoogle />}
+            name="Sign in with Google"
+          />
+          <ThirdPartySignIn
+            btnAction={() => console.log("sign in with 3rd party")}
+            icon={<FaFacebook />}
+            name="Sign in with Facebook"
+          />
+          <ThirdPartySignIn
+            btnAction={() => console.log("sign in with 3rd party")}
+            icon={<FaApple />}
+            name="Sign in with Apple"
+          />
+        </section>
+      </div>
+    );
+  }
   return <div>Forms</div>;
 }
 export default Forms;
