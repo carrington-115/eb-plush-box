@@ -41,8 +41,17 @@ const Container = styled.section`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (min-width: 320px) and (max-width: 599px) {
+      flex-direction: column;
+      gap: 40px;
+      width: 100%;
+    }
     .form {
       width: 50%;
+      @media (min-width: 320px) and (max-width: 599px) {
+        width: 100%;
+        order: 2;
+      }
     }
     .content {
       display: flex;
@@ -50,12 +59,22 @@ const Container = styled.section`
       align-items: flex-start;
       gap: 30px;
       width: 40%;
+      @media (min-width: 320px) and (max-width: 599px) {
+        width: 90%;
+        gap: 15px;
+      }
       h1 {
         color: #431f17;
         font-size: 57px;
         font-style: normal;
         font-weight: 700;
         line-height: 64px;
+        @media (min-width: 320px) and (max-width: 599px) {
+          font-size: 36px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 36px;
+        }
       }
       p {
         color: #431f17;

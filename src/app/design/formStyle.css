@@ -93,14 +93,16 @@
   .login-form form {
     padding: 40px 30px;
   }
-  .subscribe-form {
-    width: 90%;
-  }
+
   .rate-btns .rate-icon {
     padding: 5px;
   }
   .rate-icon svg {
     width: 48px;
     height: 48px;
+  }
+  .subscribe-form {
+    padding: 50px 20px;
+    border-radius: 0px;
   }
 }
