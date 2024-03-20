@@ -218,6 +218,10 @@ function TestPage() {
           type="contact"
           submitAction={() => console.log("sending the data")}
         />
+        <Forms
+          type="review"
+          submitAction={() => console.log("sending the data")}
+        />
       </div>
     </Container>
   );

@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 
-.login-form {
+.login-form,
+.review-form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,7 +13,8 @@
   gap: 40px;
 }
 
-.login-form form {
+.login-form form,
+.review-form form {
   width: 100%;
   gap: 20px;
   display: flex;
@@ -23,7 +25,8 @@
   padding: 60px 44px;
 }
 
-.login-form .heading {
+.login-form .heading,
+.review-form .heading {
   font-size: 26.857px;
   font-style: normal;
   font-weight: 500;
@@ -48,6 +51,38 @@
   background: #8d6861;
   padding: 50px 36px;
   color: white;
+}
+
+.review-form {
+  align-items: flex-start;
+}
+
+.review-form .rate-btns {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rate-btns .rate-icon {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.rate-icon:hover {
+  background: #8d68616e;
+}
+.rate-icon svg {
+  width: 64px;
+  height: 64px;
+  fill: white;
 }
 
 @media (min-width: 320px) and (max-width: 599px) {
