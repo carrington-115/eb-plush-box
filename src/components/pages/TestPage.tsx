@@ -201,9 +201,13 @@ function TestPage() {
         />
       </div>
 
-      <div>
+      <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
         <Forms
           type="login"
+          submitAction={() => console.log("sending the data")}
+        />
+        <Forms
+          type="signUp"
           submitAction={() => console.log("sending the data")}
         />
       </div>
