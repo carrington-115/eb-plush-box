@@ -1,15 +1,35 @@
 import styled from "styled-components";
 import { halfLogo } from "../../assets";
+import { Button } from ".";
 
-function LoginDefSection({ text }: { text: string }) {
+interface loginDefSectionPropsType {
+  title: string;
+  btnText: string;
+  btnAction: () => void;
+}
+
+function LoginDefSection({
+  title,
+  btnText,
+  btnAction,
+}: loginDefSectionPropsType) {
   return (
     <Container>
       <div className="logo">
         <img src={halfLogo} alt="half main logo" />
       </div>
       <div className="content">
-        <h3>{text}</h3>
+        <h3>{title}</h3>
         <h1>EB Plush Box</h1>
+        <Button
+          text={true}
+          icon={false}
+          name={btnText}
+          status="fill"
+          color="white"
+          bgColor="rgba(67, 31, 23, 1)"
+          btnAction={btnAction}
+        />
       </div>
     </Container>
   );

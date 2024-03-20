@@ -98,7 +98,7 @@ function Forms({ type, submitAction }: formPropsType) {
     return (
       <div className="login-form">
         <form onSubmit={(e) => e.preventDefault}>
-          <h3 className="heading">Login to your Account</h3>
+          <h3 className="heading">Create your Account</h3>
           <UserInput
             type="simple"
             inputType="text"
