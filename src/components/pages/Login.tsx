@@ -1,14 +1,35 @@
 import styled from "styled-components";
-import { LoginDefSection } from "../atoms";
+import { Button, LoginDefSection } from "../atoms";
+import { Forms } from "../organisms";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
+  const navigate = useNavigate();
   return (
     <Container>
       <div className="left">
-        <LoginDefSection text="Login to" />
+        <LoginDefSection
+          btnText="Sign up instead?"
+          btnAction={() => navigate("/signup")}
+          title={"Login to"}
+        />
       </div>
       <div className="right">
-        <div className="test"></div>
+        <Forms
+          type="login"
+          submitAction={() => console.log("user is logged in")}
+        />
+        <div className="action-btn">
+          <Button
+            text={true}
+            icon={false}
+            name="Sign up instead?"
+            status="text"
+            btnAction={() => navigate("/signup")}
+            color=""
+            bgColor="rgba(67, 31, 23, 1)"
+          />
+        </div>
       </div>
     </Container>
   );
@@ -21,19 +42,32 @@ const Container = styled.div`
   .right {
     display: flex;
     justify-content: center;
-    align-items: center;
-    .test {
-      max-width: 100%;
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin: 20px 0px;
-      align-items: flex-start;
+    align-items: flex-start;
+    padding: 100px 0px;
+    overflow-y: scroll;
+    width: 50%;
+    height: 100vh;
+    @media (min-width: 320px) and (max-width: 599px) {
+      width: 100%;
+      background-color: white;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .action-btn {
+      margin-top: 10px;
+      @media (min-width: 600px) {
+        display: none;
+      }
     }
   }
 
-  .left,
-  .right {
+  .left {
     width: 50%;
+    height: 100vh;
+
+    @media (min-width: 320px) and (max-width: 599px) {
+      display: none;
+    }
   }
 `;
