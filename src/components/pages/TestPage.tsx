@@ -13,6 +13,7 @@ import { personOne, productOne, sliderImage } from "../../assets";
 import {
   CartList,
   Forms,
+  Newsletter,
   ProductGridSection,
   ProductViewer,
 } from "../organisms";
@@ -223,6 +224,7 @@ function TestPage() {
           submitAction={() => console.log("sending the data")}
         />
       </div>
+      <Newsletter />
     </Container>
   );
 }
