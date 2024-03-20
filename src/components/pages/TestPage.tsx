@@ -210,6 +210,10 @@ function TestPage() {
           type="signUp"
           submitAction={() => console.log("sending the data")}
         />
+        <Forms
+          type="subscribe"
+          submitAction={() => console.log("sending the data")}
+        />
       </div>
     </Container>
   );

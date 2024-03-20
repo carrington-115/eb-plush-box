@@ -120,6 +120,35 @@ function Forms({ type, submitAction }: formPropsType) {
         </section>
       </div>
     );
+  } else if (type === "subscribe") {
+    return (
+      <div className="subscribe-form">
+        <h2 className="heading">Subscribe to Our newsletter</h2>
+        <UserInput
+          type="simple"
+          inputType="text"
+          inputName="name"
+          placeholder="Name"
+        />
+        <UserInput
+          type="simple"
+          inputType="email"
+          inputName="email"
+          placeholder="Email"
+        />
+        <Button
+          text={true}
+          icon={false}
+          name="Subscribe"
+          status="fill"
+          bgColor="rgba(67, 31, 23, 1)"
+          color="rgba(251, 247, 246, 1)"
+          btnAction={submitAction}
+        />
+      </div>
+    );
+  } else if (type === "contact") {
+    return <div className="contact-form"></div>;
   }
   return <div>Forms</div>;
 }
