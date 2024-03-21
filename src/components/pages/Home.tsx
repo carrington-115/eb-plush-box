@@ -1,6 +1,45 @@
 import "../../app/design/home.css";
-import { productImage } from "../../assets";
-import { StepSection, TopHeader } from "../molecules";
+import {
+  productFour,
+  productImage,
+  productOne,
+  productThree,
+  productTwo,
+} from "../../assets";
+import { productType } from "../../types/vartypes";
+import { ProductComponent, StepSection, TopHeader } from "../molecules";
+import { ProductGridSection } from "../organisms";
+
+const products: productType[] = [
+  {
+    imageUrl: productOne,
+    productName: "Wedding gift",
+    price: 100,
+    likeStatus: false,
+    likes: 0,
+  },
+  {
+    imageUrl: productTwo,
+    productName: "Valentine gift",
+    price: 50,
+    likeStatus: false,
+    likes: 0,
+  },
+  {
+    imageUrl: productThree,
+    productName: "Thanksgiving gift",
+    price: 100,
+    likeStatus: false,
+    likes: 0,
+  },
+  {
+    imageUrl: productFour,
+    productName: "Couples gift",
+    price: 100,
+    likeStatus: false,
+    likes: 0,
+  },
+];
 
 function Home() {
   return (
@@ -18,6 +57,27 @@ function Home() {
         btnName="Get started"
         bgColor="transparent"
       />
+      <section className="product-section">
+        <ProductGridSection rightBarActive={false}>
+          {products.map(
+            ({
+              imageUrl,
+              productName,
+              price,
+              likeStatus,
+              likes,
+            }: productType) => (
+              <ProductComponent
+                imageUrl={imageUrl}
+                productName={productName}
+                price={price}
+                likeStatus={likeStatus}
+                likes={likes}
+              />
+            )
+          )}
+        </ProductGridSection>
+      </section>
     </section>
   );
 }

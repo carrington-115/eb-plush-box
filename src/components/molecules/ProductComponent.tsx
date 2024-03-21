@@ -133,20 +133,17 @@ const Container = styled.section`
       .like-section {
         display: flex;
         align-items: center;
-        gap: 5px;
+        gap: 10px;
         .product-like-btn {
-          background-color: transparent;
-          padding: 5px;
+          padding: 10px;
           display: flex;
           justify-content: center;
-          align-items: flex-end;
+          align-items: center;
           border-radius: 50%;
 
-          img,
           svg {
             width: 24px;
             height: 24px;
-            padding: 10px;
             @media (min-width: 320px) and (max-width: 599px) {
               width: 20px;
               height: 18px;
@@ -157,6 +154,7 @@ const Container = styled.section`
             background-color: #6539303b;
           }
         }
+
         p {
         }
       }
