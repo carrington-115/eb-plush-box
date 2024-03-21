@@ -145,8 +145,8 @@ const Container = styled.section`
             width: 24px;
             height: 24px;
             @media (min-width: 320px) and (max-width: 599px) {
-              width: 20px;
-              height: 18px;
+              width: 22px;
+              height: 22px;
               padding: 2.5px;
             }
           }

@@ -10,5 +10,38 @@
   /* min-height: 100vh; */
 }
 
+.page-container .product-section {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 40px 0px;
+  margin: 20px 0px;
+}
+.product-section h1 {
+  color: #653930;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.product-section .btn-action {
+  transform: scale(1.2, 1.2);
+}
+
+.page-container .testimonial-section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1cm 0;
+}
+
 @media (min-width: 320px) and (max-width: 599px) {
+  .page-container .testimonial-section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1cm 0;
+  }
 }
