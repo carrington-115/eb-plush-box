@@ -26,6 +26,9 @@ function TestPage() {
       <Header />
       <TopHeader />
       <StepSection
+        btnName=""
+        bgColor=""
+        image=""
         title="How to order a Gift box"
         steps={[
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
