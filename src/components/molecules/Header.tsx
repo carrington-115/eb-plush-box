@@ -22,11 +22,11 @@ function Header() {
   }, [signedIn]);
   return (
     <Container>
-      <NavLink className="logo-container" to="/home">
+      <NavLink className="logo-container" to="/">
         <img src={logo} alt="The header logo" />
       </NavLink>
       <nav>
-        <HeaderLink url="/home" name="Home" />
+        <HeaderLink url="/" name="Home" />
         <HeaderLink
           url="/shopping"
           name="Shopping"
@@ -132,7 +132,7 @@ function MobileHead({
         ) : (
           <Button
             text={true}
-            name="Start Shopping"
+            name="Login"
             icon={false}
             status="fill"
             bgColor="rgba(67, 31, 23, 1)"
@@ -173,8 +173,9 @@ const MobileHeaderContainer = styled.header`
   align-items: center;
   justify-content: space-between;
   .second-part {
-    width: 40%;
+    width: fit-content;
     justify-self: flex-end;
+    margin-left: 15%;
     .mob-user-btns {
       width: 100%;
       display: flex;

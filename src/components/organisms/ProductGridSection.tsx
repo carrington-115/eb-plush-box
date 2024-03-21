@@ -35,7 +35,6 @@ function ProductGridSection({
 export default ProductGridSection;
 
 const Container = styled.section`
-  margin: 60px 0px;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -29,6 +29,7 @@ const Container = styled.section`
   margin: 2cm 1cm;
   @media (min-width: 320px) and (max-width: 599px) {
     width: 80%;
+    margin: 2cm 0 0 0;
   }
   .testimonial-image {
     position: absolute;
