@@ -132,7 +132,7 @@ function MobileHead({
         ) : (
           <Button
             text={true}
-            name="Start Shopping"
+            name="Login"
             icon={false}
             status="fill"
             bgColor="rgba(67, 31, 23, 1)"
@@ -173,8 +173,9 @@ const MobileHeaderContainer = styled.header`
   align-items: center;
   justify-content: space-between;
   .second-part {
-    width: 40%;
+    width: fit-content;
     justify-self: flex-end;
+    margin-left: 15%;
     .mob-user-btns {
       width: 100%;
       display: flex;

@@ -97,8 +97,10 @@ const Container = styled.section`
       }
       .btn {
         transform: scale(1.3, 1.3);
+        margin: 20px 0 0 30px;
+
         @media (min-width: 320px) and (max-width: 599px) {
-          margin-left: 8%;
+          margin: 0 0 0 8%;
         }
       }
     }
