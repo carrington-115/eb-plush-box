@@ -4,9 +4,15 @@ import { IoAlertSharp } from "react-icons/io5";
 import { IoIosArrowForward } from "react-icons/io";
 import { stepsSectionType } from "../../types/vartypes";
 
-function StepSection({ title, image, steps }: stepsSectionType) {
+function StepSection({
+  title,
+  image,
+  steps,
+  btnName,
+  bgColor,
+}: stepsSectionType) {
   return (
-    <Container>
+    <Container style={{ backgroundColor: bgColor }}>
       <div className="inner-section">
         <div
           className="steps"
@@ -56,21 +62,23 @@ function StepSection({ title, image, steps }: stepsSectionType) {
               </div>
             ))}
           </section>
-          <Button
-            text={true}
-            icon={true}
-            iconLink={
-              <IoIosArrowForward
-                fill="rgba(255, 255, 255, 1)"
-                style={{ width: "24px", height: "24px" }}
-              />
-            }
-            name="Get Started"
-            status="fill"
-            color="rgba(255, 255, 255, 1)"
-            bgColor="rgba(67, 31, 23, 1)"
-            btnAction={() => console.log("get started here")}
-          />
+          <div className="action-btn">
+            <Button
+              text={true}
+              icon={true}
+              iconLink={
+                <IoIosArrowForward
+                  fill="rgba(255, 255, 255, 1)"
+                  style={{ width: "24px", height: "24px" }}
+                />
+              }
+              name={btnName}
+              status="fill"
+              color="rgba(255, 255, 255, 1)"
+              bgColor="rgba(67, 31, 23, 1)"
+              btnAction={() => console.log("get started here")}
+            />
+          </div>
         </div>
         <div className="step-image">
           <img src={image} alt={title} />
@@ -121,7 +129,6 @@ const Container = styled.section`
   align-items: center;
   width: 100%;
   padding: 100px 50px 0px 0px;
-  background-color: #cfb7b2;
   @media (min-width: 320px) and (max-width: 599px) {
     padding: 100px 0px 0px 0px;
     flex-direction: column;
@@ -140,6 +147,10 @@ const Container = styled.section`
       flex-direction: column;
       padding-bottom: 50px;
       width: 50%;
+      .action-btn {
+        transform: scale(1.3, 1.3);
+        margin-left: 20px;
+      }
       @media (min-width: 320px) and (max-width: 599px) {
         margin-bottom: 50px;
         display: flex;

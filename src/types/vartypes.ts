@@ -31,6 +31,8 @@ export interface stepsSectionType {
   title: string;
   image: string;
   steps: string[];
+  btnName: string;
+  bgColor: string;
 }
 
 export interface pageLinkTypes {
