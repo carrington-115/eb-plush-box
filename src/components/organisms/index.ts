@@ -4,6 +4,8 @@ import ProductViewer from "./ProductViewer";
 import CartList from "./CartList";
 import Forms from "./Forms";
 import Newsletter from "./Newsletter";
+import Testimonials from "./Testimonials";
+
 export {
   ProductGridSection,
   Forms,
@@ -11,4 +13,5 @@ export {
   ProductViewer,
   CartList,
   Newsletter,
+  Testimonials,
 };
