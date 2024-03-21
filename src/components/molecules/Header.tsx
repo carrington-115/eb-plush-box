@@ -22,11 +22,11 @@ function Header() {
   }, [signedIn]);
   return (
     <Container>
-      <NavLink className="logo-container" to="/home">
+      <NavLink className="logo-container" to="/">
         <img src={logo} alt="The header logo" />
       </NavLink>
       <nav>
-        <HeaderLink url="/home" name="Home" />
+        <HeaderLink url="/" name="Home" />
         <HeaderLink
           url="/shopping"
           name="Shopping"
