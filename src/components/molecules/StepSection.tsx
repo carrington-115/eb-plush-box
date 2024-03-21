@@ -1,11 +1,10 @@
 import styled from "styled-components";
-import { productImage } from "../../assets";
 import { Button } from "../atoms";
 import { IoAlertSharp } from "react-icons/io5";
 import { IoIosArrowForward } from "react-icons/io";
 import { stepsSectionType } from "../../types/vartypes";
 
-function StepSection({ title, steps }: stepsSectionType) {
+function StepSection({ title, image, steps }: stepsSectionType) {
   return (
     <Container>
       <div className="inner-section">
@@ -74,7 +73,7 @@ function StepSection({ title, steps }: stepsSectionType) {
           />
         </div>
         <div className="step-image">
-          <img src={productImage} alt="image of products" />
+          <img src={image} alt={title} />
         </div>
       </div>
     </Container>

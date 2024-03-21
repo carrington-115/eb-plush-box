@@ -29,6 +29,7 @@ export interface productType {
 
 export interface stepsSectionType {
   title: string;
+  image: string;
   steps: string[];
 }
 
