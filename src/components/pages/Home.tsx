@@ -2,25 +2,23 @@ import { useNavigate } from "react-router-dom";
 import "../../app/design/home.css";
 import {
   mockupImage,
-  personOne,
-  personThree,
-  personTwo,
   productFour,
   productImage,
   productOne,
   productThree,
   productTwo,
 } from "../../assets";
-import { productType, testimonyType } from "../../types/vartypes";
+import { productType } from "../../types/vartypes";
 import { Button } from "../atoms";
+import { ProductComponent, StepSection, TopHeader } from "../molecules";
 import {
-  ProductComponent,
-  StepSection,
-  Testimonial,
-  TopHeader,
-} from "../molecules";
-import { ProductGridSection } from "../organisms";
+  Accordion,
+  Newsletter,
+  ProductGridSection,
+  Testimonials,
+} from "../organisms";
 import { IoArrowForward } from "react-icons/io5";
+import { useEffect } from "react";
 
 const products: productType[] = [
   {
@@ -53,35 +51,12 @@ const products: productType[] = [
   },
 ];
 
-const testimonials: testimonyType[] = [
-  {
-    profileImage: personOne,
-    testifierMessage: {
-      name: "Fri Doh Melvis",
-      message:
-        "I am so glad I ordered this packages as my birthday gift. It was everything I wanted and more. Personallized to my taste. I loveeeee the perfume, scented candle and white chocololate ",
-    },
-  },
-  {
-    profileImage: personTwo,
-    testifierMessage: {
-      name: "Fri Doh Melvis",
-      message:
-        "I am so glad I ordered this packages as my birthday gift. It was everything I wanted and more. Personallized to my taste. I loveeeee the perfume, scented candle and white chocololate ",
-    },
-  },
-  {
-    profileImage: personThree,
-    testifierMessage: {
-      name: "Fri Doh Melvis",
-      message:
-        "I am so glad I ordered this packages as my birthday gift. It was everything I wanted and more. Personallized to my taste. I loveeeee the perfume, scented candle and white chocololate ",
-    },
-  },
-];
-
 function Home() {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    document.title = "Home";
+  }, []);
   return (
     <section className="page-container">
       <TopHeader />
@@ -144,15 +119,9 @@ function Home() {
         btnName="Get started"
         bgColor="rgba(207, 183, 178, 1)"
       />
-      <section className="testimonial-section">
-        {testimonials.map((testimony, index) => (
-          <Testimonial
-            key={index}
-            profileImage={testimony?.profileImage}
-            testifierMessage={testimony?.testifierMessage}
-          />
-        ))}
-      </section>
+      <Testimonials />
+      <Accordion />
+      <Newsletter />
     </section>
   );
 }
