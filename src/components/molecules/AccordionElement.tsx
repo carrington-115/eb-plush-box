@@ -39,7 +39,6 @@ const Container = styled.div`
   width: fit-content;
   border-radius: 10px;
   border: 1px solid #161616;
-  margin-bottom: 2cm;
   padding: 10px 20px;
   cursor: pointer;
   width: 50%;

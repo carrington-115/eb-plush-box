@@ -11,8 +11,14 @@ import {
 import { productType } from "../../types/vartypes";
 import { Button } from "../atoms";
 import { ProductComponent, StepSection, TopHeader } from "../molecules";
-import { ProductGridSection, Testimonials } from "../organisms";
+import {
+  Accordion,
+  Newsletter,
+  ProductGridSection,
+  Testimonials,
+} from "../organisms";
 import { IoArrowForward } from "react-icons/io5";
+import { useEffect } from "react";
 
 const products: productType[] = [
   {
@@ -47,6 +53,10 @@ const products: productType[] = [
 
 function Home() {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    document.title = "Home";
+  }, []);
   return (
     <section className="page-container">
       <TopHeader />
@@ -110,6 +120,8 @@ function Home() {
         bgColor="rgba(207, 183, 178, 1)"
       />
       <Testimonials />
+      <Accordion />
+      <Newsletter />
     </section>
   );
 }
