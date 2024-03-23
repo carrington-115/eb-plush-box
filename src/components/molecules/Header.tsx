@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { logo } from "../../assets";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { Button, HeaderLink } from "../atoms";
 import { IoIosArrowForward } from "react-icons/io";
 import { useState, useEffect } from "react";
@@ -82,28 +82,15 @@ function Header() {
           closeActivity={() => setHamMenuActive(false)}
           status={hamMenuActive}
         />
-        <MobileHead
-          menuActivity={() => setHamMenuActive(true)}
-          signInStatus={signedIn}
-          setSignInFunc={() => setSignedIn(true)}
-          orderNumber={orderNumber}
-          userNameInitial={userNameInitial}
-          setOrderFunc={() => setOrderNumber(orderNumber + 1)}
-        />
+        <MobileHead menuActivity={() => setHamMenuActive(true)} />
       </div>
     </Container>
   );
 }
 export default Header;
 
-function MobileHead({
-  signInStatus,
-  menuActivity,
-  setSignInFunc,
-  setOrderFunc,
-  orderNumber,
-  userNameInitial,
-}: mobileHeadType) {
+function MobileHead({ menuActivity }: mobileHeadType) {
+  const navigate = useNavigate();
   return (
     <MobileHeaderContainer>
       <span className="menu-icon" onClick={menuActivity}>
@@ -115,31 +102,15 @@ function MobileHead({
         <img src={logo} alt="Plush box website" />
       </div>
       <div className="second-part">
-        {signInStatus ? (
-          <div className="mob-user-btns">
-            <div className="cart-btn" onClick={setOrderFunc}>
-              <span className="cart-icon">
-                <IoMdCart style={{ width: "16px", height: "16px" }} />
-              </span>
-              <span className="order-number">{orderNumber}</span>
-            </div>
-            <button className="account-btn" type="button">
-              <span>
-                <h1>{userNameInitial}</h1>
-              </span>
-            </button>
-          </div>
-        ) : (
-          <Button
-            text={true}
-            name="Login"
-            icon={false}
-            status="fill"
-            bgColor="rgba(67, 31, 23, 1)"
-            color="white"
-            btnAction={setSignInFunc}
-          />
-        )}
+        <Button
+          text={true}
+          name="Login"
+          icon={false}
+          status="fill"
+          bgColor="rgba(67, 31, 23, 1)"
+          color="white"
+          btnAction={() => navigate("/login")}
+        />
       </div>
     </MobileHeaderContainer>
   );

@@ -80,9 +80,10 @@ export interface accordionType {
 }
 
 export interface mobileHeadType {
-  signInStatus: boolean;
   menuActivity: () => void;
-  setSignInFunc: () => void;
+}
+
+export interface cartHeaderCompPropType {
   setOrderFunc: () => void;
   orderNumber: number;
   userNameInitial: string;
