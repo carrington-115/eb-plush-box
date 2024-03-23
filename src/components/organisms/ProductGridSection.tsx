@@ -32,18 +32,11 @@ const Container = styled.section`
       grid-gap: 10px;
     }
   }
-
-  /*
-
-  style={{
-          gridTemplateColumns:
-            rightBarActive || isSmallScreen
-              ? "repeat(2, 1fr)"
-              : "repeat(4, 1fr)",
-        }}
-  */
   .grid-resize {
     grid-template-columns: repeat(2, 1fr);
     padding-left: 100px;
+    @media (min-width: 320px) and (max-width: 599px) {
+      padding-left: 0;
+    }
   }
 `;
