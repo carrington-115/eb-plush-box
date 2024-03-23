@@ -2,23 +2,25 @@
   padding: 0;
   margin: 0;
 }
-.container-normal,
-.container-resize {
+
+.container-nothing {
+  display: none;
+}
+.container-normal {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 40%;
   padding: 50px 40px;
   gap: 25px;
-  border-radius: 40.332px;
+  border-radius: 40px;
   background: #cfb7b2;
-  position: absolute;
   right: 20px;
+  position: absolute;
   top: 0;
 }
 
-.container-normal .header,
-.container-resize .header {
+.container-normal .header {
   width: 100%;
   display: flex;
   justify-content: flex-end;
@@ -43,8 +45,7 @@
   background-color: rgba(101, 57, 48, 0.15);
 }
 
-.container-normal .component-footer,
-.container-resize .component-footer {
+.container-normal .component-footer {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -59,22 +60,25 @@
 }
 
 @media (min-width: 320px) and (max-width: 599px) {
-  .container-normal,
-  .container-resize {
-    width: 100%;
-    border-radius: 20px 20px 0 0;
-    padding: 30px 40px;
-    bottom: 0;
-    right: 0;
-    left: 0;
+  .display-nothing {
+    display: block;
+    position: fixed;
+    top: 0;
+    transform: translateY(-10px);
+    transition: all 0.5s 250ms ease-in-out;
   }
-
-  .container-resize {
+  .container-normal {
+    display: flex;
+    width: 100%;
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
+    bottom: 0;
     z-index: 20;
+    transform: translateY(0%);
+    transition: all 0.5s 250ms ease-in-out;
+    border-radius: 40px 40px 0px 0px;
   }
 
   .close-btn {

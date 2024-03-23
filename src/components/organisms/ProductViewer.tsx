@@ -2,7 +2,7 @@ import { ProductSlider } from "../molecules";
 import { IoClose } from "react-icons/io5";
 import { Button, ProductDetails } from "../atoms";
 import { productViewerType } from "../../types/vartypes";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { IoArrowForward } from "react-icons/io5";
 import "../../app/design/viewer.css";
 
@@ -22,22 +22,8 @@ function ProductViewer({
     }
   }
 
-  const [smallScreen, setSmallScreen] = useState<boolean>(false);
-
-  useEffect(() => {
-    // Listen for window resize events
-    window.addEventListener("resize", () => {
-      setSmallScreen(window.matchMedia("(max-width: 599px)").matches);
-    });
-  }, []);
-
   return (
-    <section
-      style={{
-        display: display ? "flex" : "none",
-      }}
-      className={smallScreen ? "container-resize" : "container-normal"}
-    >
+    <section className={display ? "container-normal" : "container-nothing"}>
       <div className="header">
         <span className="close-btn" onClick={closeAction}>
           <IoClose />
