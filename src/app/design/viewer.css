@@ -77,6 +77,7 @@
     bottom: 0;
     z-index: 20;
     transform: translateY(0%);
+    overflow-y: scroll;
     transition: all 0.5s 250ms ease-in-out;
     border-radius: 40px 40px 0px 0px;
   }
@@ -86,6 +87,6 @@
   }
 
   .close-btn svg {
-    width: 24px;
+    width: 36px;
   }
 }
