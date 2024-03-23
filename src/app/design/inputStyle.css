@@ -104,8 +104,9 @@
   outline: none;
 }
 
-.rate-input {
-}
-
-.card-input {
+@media (min-width: 320px) and (max-width: 599px) {
+  .search-input {
+    width: 80vw;
+    padding: 5px 10px;
+  }
 }
