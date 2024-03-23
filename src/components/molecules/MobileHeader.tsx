@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { MdClose } from "react-icons/md";
 import { Button } from "../atoms";
@@ -7,11 +7,22 @@ import { pageLinks } from "../data";
 import { hamMenuType } from "../../types/vartypes";
 
 function MobileHeader({ status, closeActivity }: hamMenuType) {
+  const navigate = useNavigate();
+
+  function handleSignIn() {
+    navigate("/login");
+    closeActivity();
+  }
+
+  function handleSignUp() {
+    navigate("/signup");
+    closeActivity();
+  }
   return (
     <Container
       style={{
         transform: status ? "translateX(0%)" : "translateX(-100%)",
-        transition: "all 0.5s 250ms ease-in-out",
+        transition: "all 0.35s 250ms ease-in",
       }}
     >
       <section className="top-mobile-header">
@@ -50,7 +61,7 @@ function MobileHeader({ status, closeActivity }: hamMenuType) {
           name="Sign in"
           color="rgba(251, 247, 246, 1)"
           bgColor="rgba(67, 31, 23, 1)"
-          btnAction={() => console.log("Start shopping")}
+          btnAction={handleSignIn}
         />
         <Button
           text={true}
@@ -59,7 +70,7 @@ function MobileHeader({ status, closeActivity }: hamMenuType) {
           name="Create an Account"
           color="rgba(251, 247, 246, 1)"
           bgColor="rgba(67, 31, 23, 1)"
-          btnAction={() => console.log("Start shopping")}
+          btnAction={handleSignUp}
         />
       </section>
     </Container>

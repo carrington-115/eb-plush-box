@@ -1,27 +1,32 @@
 import styled from "styled-components";
 import { logo } from "../../assets";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { Button, HeaderLink } from "../atoms";
 import { IoIosArrowForward } from "react-icons/io";
 import { useState, useEffect } from "react";
-import { IoMdCart } from "react-icons/io";
+// import { IoMdCart } from "react-icons/io";
 import MobileHeader from "./MobileHeader";
 import { RiMenu2Line } from "react-icons/ri";
 import { mobileHeadType } from "../../types/vartypes";
 
 function Header() {
-  const [signedIn, setSignedIn] = useState<boolean>(false);
-  const [orderNumber, setOrderNumber] = useState<number>(12);
-  const [userNameInitial, setUserNameInitial] = useState<string>("");
+  // const [signedIn, setSignedIn] = useState<boolean>(false);
+  // const [orderNumber, setOrderNumber] = useState<number>(12);
+  // const [userNameInitial, setUserNameInitial] = useState<string>("");
   const [hamMenuActive, setHamMenuActive] = useState<boolean>(false);
+  const [displayHeader, setDisplayHeader] = useState<boolean>(false);
 
+  const navigate = useNavigate();
+  const location = useLocation().pathname;
   useEffect(() => {
-    if (signedIn) {
-      setUserNameInitial("M");
+    if (location === "/login" || location === "/signup") {
+      setDisplayHeader(false);
+    } else {
+      setDisplayHeader(true);
     }
-  }, [signedIn]);
+  }, [location]);
   return (
-    <Container>
+    <Container style={{ display: displayHeader ? "flex" : "none" }}>
       <NavLink className="logo-container" to="/">
         <img src={logo} alt="The header logo" />
       </NavLink>
@@ -38,45 +43,27 @@ function Header() {
         <HeaderLink url="/about" name="About us" />
         <HeaderLink url="/contact" name="Contact us" />
       </nav>
-      {!signedIn ? (
-        <div className="account-btns">
-          <Button
-            text={true}
-            name="Start Shopping"
-            icon={false}
-            status="fill"
-            bgColor="rgba(67, 31, 23, 1)"
-            color="rgba(255, 255, 255, 1)"
-            btnAction={() => console.log("hello world")}
-          />
-          <Button
-            text={true}
-            name="Login"
-            icon={false}
-            status="fill"
-            bgColor="rgba(234, 215, 211, 1)"
-            color="rgba(67, 31, 23, 1)"
-            btnAction={() => setSignedIn(true)}
-          />
-        </div>
-      ) : (
-        <div className="user-btns">
-          <div
-            className="cart-btn"
-            onClick={() => setOrderNumber(orderNumber + 1)}
-          >
-            <span className="cart-icon">
-              <IoMdCart style={{ width: "24px", height: "24px" }} />
-            </span>
-            <span className="order-number">{orderNumber}</span>
-          </div>
-          <button className="account-btn" type="button">
-            <span>
-              <h1>{userNameInitial}</h1>
-            </span>
-          </button>
-        </div>
-      )}
+      <div className="account-btns">
+        <Button
+          text={true}
+          name="Start Shopping"
+          icon={false}
+          status="fill"
+          bgColor="rgba(67, 31, 23, 1)"
+          color="rgba(255, 255, 255, 1)"
+          btnAction={() => navigate("/shopping")}
+        />
+        <Button
+          text={true}
+          name="Login"
+          icon={false}
+          status="fill"
+          bgColor="rgba(234, 215, 211, 1)"
+          color="rgba(67, 31, 23, 1)"
+          btnAction={() => navigate("/login")}
+        />
+      </div>
+
       <div className="mobile-header">
         <MobileHeader
           closeActivity={() => setHamMenuActive(false)}
@@ -91,6 +78,7 @@ export default Header;
 
 function MobileHead({ menuActivity }: mobileHeadType) {
   const navigate = useNavigate();
+
   return (
     <MobileHeaderContainer>
       <span className="menu-icon" onClick={menuActivity}>
@@ -147,70 +135,6 @@ const MobileHeaderContainer = styled.header`
     width: fit-content;
     justify-self: flex-end;
     margin-left: 15%;
-    .mob-user-btns {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      gap: 20px;
-
-      .cart-btn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        border-radius: 50%;
-        background-color: rgba(251, 247, 246, 1);
-        border: none;
-        &:hover {
-          background-color: rgba(234, 215, 211, 1);
-        }
-        cursor: pointer;
-        .cart-icon {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          padding: 12px;
-        }
-        .order-number {
-          position: absolute;
-          top: -10px;
-          right: 0;
-          background-color: rgba(67, 31, 23, 1);
-          color: white;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          padding: 3px;
-          border-radius: 20px;
-          h1 {
-            font-size: 12px;
-            font-family: "El Messiri";
-          }
-        }
-      }
-
-      .account-btn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: none;
-        padding: 10px 12px;
-        border-radius: 50%;
-        background-color: rgba(67, 31, 23, 1);
-        color: rgba(234, 215, 211, 1);
-        cursor: pointer;
-        span {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          padding: 3px 2px;
-          h1 {
-            font-size: 16px;
-          }
-        }
-      }
-    }
   }
 `;
 
