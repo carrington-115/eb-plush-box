@@ -30,12 +30,19 @@ function Shopping() {
   useEffect(() => {
     console.log(productViewerStatus);
   }, [productViewerStatus]);
+
   return (
     <div className="page-container">
       <div className="search-section">
         <UserInput type="search" inputName="search" />
       </div>
-      <section className="products-section">
+      <section
+        className={
+          productViewerStatus
+            ? "products-section-active"
+            : "products-section-normal"
+        }
+      >
         <ProductGridSection rightBarActive={productViewerStatus}>
           {products.map(
             ({ imageUrl, productName, price, likeStatus, likes }, index) => (
