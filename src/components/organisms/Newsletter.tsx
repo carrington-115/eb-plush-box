@@ -36,6 +36,9 @@ const Container = styled.section`
   align-items: center;
   background: #cfb7b2;
   padding: 2cm 0;
+  @media (min-width: 320px) and (max-width: 599px) {
+    padding: 2cm 0 0 0;
+  }
   .inner-section {
     width: 80%;
     display: flex;

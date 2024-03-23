@@ -1,9 +1,14 @@
 import { useEffect, useState } from "react";
 import "../../app/design/shopping.css";
 import { UserInput } from "../atoms";
-import { ProductGridSection, ProductViewer } from "../organisms";
+import {
+  Accordion,
+  Newsletter,
+  ProductGridSection,
+  ProductViewer,
+} from "../organisms";
 import { products } from "../data";
-import { ProductComponent } from "../molecules";
+import { ProductComponent, StepSection } from "../molecules";
 import { productImage } from "../../assets";
 
 function Shopping() {
@@ -70,6 +75,20 @@ function Shopping() {
           />
         )}
       </section>
+      <StepSection
+        title="How to get the Perfect gift  "
+        image={productImage}
+        steps={[
+          "Sign in or Create your Account on the Platform",
+          "Proceed to the Shop page and select the gift you want",
+          "Add the gift to the cart and proceed to check out",
+          "You can then complete your order with payment and wait for you gift",
+        ]}
+        btnName="Get started"
+        bgColor="#cfb7b2"
+      />
+      <Accordion />
+      <Newsletter />
     </div>
   );
 }
