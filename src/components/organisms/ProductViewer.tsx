@@ -13,9 +13,9 @@ function ProductViewer({
   productPrice,
   title,
   description,
+  closeAction,
 }: productViewerType) {
   const [btnClicked, setBtnClicked] = useState<boolean>(false);
-
   function handleWhenClick() {
     if (btnClicked !== true) {
       setBtnClicked(true);
@@ -25,7 +25,7 @@ function ProductViewer({
   return (
     <Container style={{ display: display ? "flex" : "none" }}>
       <div className="header">
-        <span className="close-btn">
+        <span className="close-btn" onClick={closeAction}>
           <IoClose />
         </span>
       </div>
@@ -63,11 +63,14 @@ const Container = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 35%;
+  width: 40%;
   padding: 50px 40px;
   gap: 25px;
-  background-color: rgba(244, 233, 218, 1);
-  border-radius: 36px;
+  border-radius: 40.332px;
+  background: #cfb7b2;
+  position: absolute;
+  right: 20px;
+  top: 0;
   @media (min-width: 320px) and (max-width: 599px) {
     width: 100%;
     border-radius: 20px 20px 0 0;

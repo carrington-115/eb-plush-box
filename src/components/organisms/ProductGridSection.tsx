@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useState } from "react";
+import { ReactNode } from "react";
 import styled from "styled-components";
 
 function ProductGridSection({
@@ -8,25 +8,9 @@ function ProductGridSection({
   rightBarActive: boolean;
   children: ReactNode;
 }) {
-  const [isSmallScreen, setIsSmallScreen] = useState<boolean>(false);
-
-  useEffect(() => {
-    window.addEventListener("resize", () =>
-      setIsSmallScreen(window.matchMedia("(max-width: 599px)").matches)
-    );
-  }, [isSmallScreen]);
-
   return (
     <Container>
-      <div
-        className="inner-grid"
-        style={{
-          gridTemplateColumns:
-            rightBarActive || isSmallScreen
-              ? "repeat(2, 1fr)"
-              : "repeat(4, 1fr)",
-        }}
-      >
+      <div className={rightBarActive ? "grid-resize" : "inner-grid"}>
         {children}
       </div>
     </Container>
@@ -38,12 +22,28 @@ const Container = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  .inner-grid {
+  .inner-grid,
+  .grid-resize {
     display: grid;
     grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
     @media (min-width: 320px) and (max-width: 599px) {
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 10px;
     }
+  }
+
+  /*
+
+  style={{
+          gridTemplateColumns:
+            rightBarActive || isSmallScreen
+              ? "repeat(2, 1fr)"
+              : "repeat(4, 1fr)",
+        }}
+  */
+  .grid-resize {
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 100px;
   }
 `;

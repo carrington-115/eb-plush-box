@@ -9,6 +9,7 @@ function ProductComponent({
   price,
   likeStatus,
   likes,
+  productAction,
 }: productType) {
   const [loading, setLoading] = useState<boolean>(true);
 
@@ -22,7 +23,7 @@ function ProductComponent({
     return <ComponentSkeleton />;
   }
   return (
-    <Container>
+    <Container onClick={productAction}>
       <section className="product-inner-section">
         <div className="product-image">
           <img src={imageUrl} alt={productName} />

@@ -25,6 +25,7 @@ export interface productType {
   price: number;
   likeStatus: boolean;
   likes: number;
+  productAction?: () => void;
 }
 
 export interface stepsSectionType {
@@ -103,6 +104,7 @@ export interface productViewerType {
   description: string;
   listDetails: string[];
   sliderImages: string[];
+  closeAction: () => void;
 }
 
 export interface stepCompPropsType {

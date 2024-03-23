@@ -5,7 +5,22 @@
 }
 
 .page-container {
+  background: #fbf7f6;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding-bottom: 3cm;
 }
 
 .page-container .search-section {
+  margin-top: 50px;
+  align-self: center;
+}
+.page-container .products-section {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 70px;
+  position: relative;
 }

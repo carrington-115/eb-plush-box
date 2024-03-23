@@ -33,6 +33,8 @@
   padding: 10px 20px;
   width: 60vw;
   border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #431f17;
 }
 .search-input .input-section {
   width: 80%;
