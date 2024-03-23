@@ -37,7 +37,7 @@ function MobileHeader({ status, closeActivity }: hamMenuType) {
       </section>
       <nav className="mobile-navigation">
         {pageLinks.map(({ name, to }: pageLinkTypes) => (
-          <NavLink className="mobile-link" to={to}>
+          <NavLink onClick={closeActivity} className="mobile-link" to={to}>
             {name}
           </NavLink>
         ))}
