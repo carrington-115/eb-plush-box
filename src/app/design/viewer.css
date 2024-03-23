@@ -64,7 +64,6 @@
     display: block;
     position: fixed;
     top: 0;
-    transform: translateY(-10px);
     transition: all 0.5s 250ms ease-in-out;
   }
   .container-normal {
@@ -78,8 +77,12 @@
     z-index: 20;
     transform: translateY(0%);
     overflow-y: scroll;
-    transition: all 0.5s 250ms ease-in-out;
+    transition: all 5s 250ms ease-in-out;
     border-radius: 40px 40px 0px 0px;
+  }
+
+  .container-normal .product-details p {
+    font-size: 20px;
   }
 
   .close-btn {
