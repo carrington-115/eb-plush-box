@@ -1,10 +1,11 @@
 import { useState } from "react";
 import "../../app/design/contact.css";
 import { contactCompPropsType } from "../../types/vartypes";
-import { ContactComponent } from "../molecules";
-import { Forms } from "../organisms";
+import { ContactComponent, StepSection } from "../molecules";
+import { Accordion, Forms, Newsletter } from "../organisms";
 import { Button } from "../atoms";
 import { IoMdClose } from "react-icons/io";
+import { productImage } from "../../assets";
 
 const contacts: contactCompPropsType[] = [
   {
@@ -76,6 +77,20 @@ function Contact() {
           </section>
         )}
       </section>
+      <StepSection
+        title="How to get the Perfect gift  "
+        image={productImage}
+        steps={[
+          "Sign in or Create your Account on the Platform",
+          "Proceed to the Shop page and select the gift you want",
+          "Add the gift to the cart and proceed to check out",
+          "You can then complete your order with payment and wait for you gift",
+        ]}
+        btnName="Get started"
+        bgColor="#cfb7b2"
+      />
+      <Accordion />
+      <Newsletter />
     </section>
   );
 }
