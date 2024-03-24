@@ -97,6 +97,10 @@
     width: 100%;
   }
 
+  .contact-form form {
+    border-radius: 20px 20px 0px 0px;
+  }
+
   .login-form form {
     padding: 40px 20px;
     border-radius: 0;
