@@ -2,12 +2,19 @@ import styled from "styled-components";
 import { Button } from "../atoms";
 import { MdLocalPhone } from "react-icons/md";
 import { contactCompPropsType } from "../../types/vartypes";
+import { useNavigate } from "react-router-dom";
 
 function ContactComponent({
   name,
   description,
   btnAction,
 }: contactCompPropsType) {
+  const navigate = useNavigate();
+
+  function handleInput() {
+    navigate("/");
+  }
+
   return (
     <Container>
       <div className="head">
@@ -32,7 +39,7 @@ function ContactComponent({
             />
           }
           status="fill"
-          btnAction={btnAction}
+          btnAction={btnAction || handleInput}
           color="#ead7d3"
           bgColor="rgba(67, 31, 23, 1)"
         />
@@ -51,7 +58,7 @@ const Container = styled.div`
   border-radius: 20px;
   background: #ead7d3;
   color: rgba(67, 31, 23, 1);
-  width: 35%;
+  width: 100%;
   @media (min-width: 320px) and (max-width: 599px) {
     width: 90%;
     padding: 30px 24px;

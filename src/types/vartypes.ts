@@ -135,7 +135,7 @@ export interface cartListPropsType {
 export interface contactCompPropsType {
   name: string;
   description: string;
-  btnAction: () => void;
+  btnAction?: () => void;
 }
 
 export interface thirdPartyBtnPropsType {
