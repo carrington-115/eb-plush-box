@@ -5,7 +5,8 @@
 }
 
 .login-form,
-.review-form {
+.review-form,
+.contact-form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,8 +14,13 @@
   gap: 40px;
 }
 
+.contact-form {
+  width: 100%;
+}
+
 .login-form form,
-.review-form form {
+.review-form form,
+.contact-form form {
   width: 100%;
   gap: 20px;
   display: flex;
@@ -90,6 +96,12 @@
   .review-form {
     width: 100%;
   }
+
+  .contact-form form {
+    border-radius: 20px 20px 0px 0px;
+    padding: 60px 24px;
+  }
+
   .login-form form {
     padding: 40px 20px;
     border-radius: 0;

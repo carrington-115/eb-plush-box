@@ -60,7 +60,7 @@ const Container = styled.div`
   color: rgba(67, 31, 23, 1);
   width: 100%;
   @media (min-width: 320px) and (max-width: 599px) {
-    width: 90%;
+    width: 100%;
     padding: 30px 24px;
   }
   .head {

@@ -182,7 +182,7 @@ function Forms({ type, submitAction }: formPropsType) {
     );
   } else if (type === "contact") {
     return (
-      <div className="login-form">
+      <div className="contact-form">
         <form onSubmit={(e) => e.preventDefault}>
           <UserInput
             type="simple"
