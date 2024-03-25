@@ -8,6 +8,10 @@ import {
   Shopping,
   Signup,
   TestPage,
+  CheckoutLayout,
+  Cart,
+  Checkout,
+  Rate,
 } from "./components/pages";
 import { Header } from "./components/molecules";
 
@@ -24,6 +28,11 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/test" element={<TestPage />} />
+          <Route element={<CheckoutLayout />}>
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/rate" element={<Rate />} />
+          </Route>
         </Routes>
       </Router>
     </>

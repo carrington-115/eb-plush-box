@@ -8,6 +8,7 @@ import Shopping from "./Shopping";
 import Cart from "./Cart";
 import Rate from "./Rate";
 import Checkout from "./Checkout";
+import CheckoutLayout from "./CheckoutLayout";
 
 export {
   Login,
@@ -20,4 +21,5 @@ export {
   Cart,
   Rate,
   Checkout,
+  CheckoutLayout,
 };
