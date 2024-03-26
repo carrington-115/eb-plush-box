@@ -1,6 +1,8 @@
+import styled from "styled-components";
+
 function CheckoutForm() {
-  return (
-    <div>CheckoutForm</div>
-  )
+  return <Container>CheckoutForm</Container>;
 }
-export default CheckoutForm
+export default CheckoutForm;
+
+const Container = styled.form``;

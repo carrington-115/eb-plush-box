@@ -7,7 +7,6 @@ import {
   Login,
   Shopping,
   Signup,
-  TestPage,
   CheckoutLayout,
   Cart,
   Checkout,
@@ -27,7 +26,6 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/test" element={<TestPage />} />
           <Route element={<CheckoutLayout />}>
             <Route path="/cart" element={<Cart />} />
             <Route path="/checkout" element={<Checkout />} />
