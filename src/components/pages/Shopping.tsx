@@ -31,6 +31,25 @@ function Shopping() {
       "Lorem ipsum dolor sit amet consectetur",
     ],
   });
+  setViewerParameters((prev) => {
+    return {
+      ...prev,
+      display: productViewerStatus,
+      sliderImages: [productImage, productImage, productImage],
+      price: 2000,
+      title: "Gift product to order",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, providentquasi! Nobis, esse dolores ipsam beatae cupiditate maxime eius suscipitdebitis nulla eaque commodi veritatis amet sed rerum excepturi assumenda.",
+      listDetails: [
+        "Lorem ipsum dolor sit amet consectetur",
+        "Lorem ipsum dolor sit amet consectetur",
+        "Lorem ipsum dolor sit amet consectetur",
+        "Lorem ipsum dolor sit amet consectetur",
+        "Lorem ipsum dolor sit amet consectetur",
+        "Lorem ipsum dolor sit amet consectetur",
+      ],
+    };
+  });
 
   useEffect(() => {
     console.log(productViewerStatus);
