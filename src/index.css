@@ -13,3 +13,8 @@
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
 }
+
+body,
+html {
+  overflow-x: hidden;
+}
