@@ -124,7 +124,7 @@ export interface cartListElementPropsType {
   image: string;
   name: string;
   price: number;
-  removeElementAction: () => void;
+  removeElementAction?: () => void;
 }
 export interface cartListPropsType {
   cartProducts: cartListElementPropsType[];

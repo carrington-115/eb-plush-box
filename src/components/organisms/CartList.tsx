@@ -140,11 +140,11 @@ const ElementContainer = styled.div`
 const Container = styled.section`
   display: flex;
   flex-direction: column;
-  width: 35%;
+  width: 100%;
   align-items: center;
   padding: 30px 20px;
   background-color: rgba(234, 215, 211, 1);
-  border-radius: 45px;
+  border-radius: 30px;
   gap: 100px;
   @media (min-width: 320px) and (max-width: 599px) {
     padding: 40px 20px;

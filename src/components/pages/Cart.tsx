@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { StepComponent } from "../atoms";
+import { CartList } from "../organisms";
+import { productTwo } from "../../assets";
 
 const steps: string[] = [
   "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
@@ -17,7 +19,26 @@ function Cart() {
           <StepComponent key={index} number={index + 1} title={text} />
         ))}
       </Steps>
-      <FormSection></FormSection>
+      <FormSection>
+        <CartList
+          cartProducts={[
+            {
+              id: "143akjaglj;ag",
+              image: productTwo,
+              name: "Valentine Gift",
+              price: 200,
+            },
+            {
+              id: "143akjaglj;ag",
+              image: productTwo,
+              name: "Valentine Gift",
+              price: 200,
+            },
+          ]}
+          checkoutBtnAction={() => console.log("checkout from cart")}
+          totalPrice={1000}
+        />
+      </FormSection>
     </>
   );
 }
@@ -43,4 +64,6 @@ const Steps = styled.section`
   }
 `;
 
-const FormSection = styled.section``;
+const FormSection = styled.section`
+  width: 40%;
+`;
