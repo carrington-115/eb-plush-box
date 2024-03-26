@@ -12,6 +12,8 @@
 
 .page-container .page-details-container {
   margin: 50px 0px;
+  width: 100%;
+  align-self: flex-start;
   display: flex;
   align-items: center;
   justify-content: space-around;
