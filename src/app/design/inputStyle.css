@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+input,
+textarea {
+  background-color: white;
+}
+
 .simple-input,
 .multiline-input {
   background-color: white;
@@ -23,6 +28,7 @@
   line-height: 28px;
   font-family: El Messiri;
   width: 100%;
+  background-color: white;
 }
 .search-input {
   display: flex;
@@ -41,6 +47,7 @@
 }
 .search-section input {
   width: 100%;
+  background-color: white;
 }
 .search-input .search-icon {
   padding: 10px;
@@ -68,7 +75,6 @@
 .checkbox-input input {
   width: 20px;
   height: 20px;
-  background-color: rgba(67, 31, 23, 1);
 }
 
 .checkbox-input label {
