@@ -31,7 +31,7 @@ function App() {
           <Route element={<CheckoutLayout />}>
             <Route path="/cart" element={<Cart />} />
             <Route path="/checkout" element={<Checkout />} />
-            <Route path="/rate" element={<Rate />} />
+            <Route path="/review" element={<Rate />} />
           </Route>
         </Routes>
       </Router>

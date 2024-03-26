@@ -2,13 +2,7 @@ import styled from "styled-components";
 import { CartList } from "../organisms";
 import { productTwo } from "../../assets";
 import { Steps } from "../molecules";
-
-const steps: string[] = [
-  "Double-check your selections and review your cart details.",
-  "Select a payment method, and confirm your order details.",
-  " Finalize your purchase by securely entering your payment information",
-  "You can now relax for your order to be delivered",
-];
+import { steps } from "../data";
 
 function Cart() {
   return (
