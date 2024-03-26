@@ -4,17 +4,17 @@ import { CartList } from "../organisms";
 import { productTwo } from "../../assets";
 
 const steps: string[] = [
-  "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-  "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-  "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-  "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  "Double-check your selections and review your cart details.",
+  "Select a payment method, and confirm your order details.",
+  " Finalize your purchase by securely entering your payment information",
+  "You can now relax for your order to be delivered",
 ];
 
 function Cart() {
   return (
     <>
       <Steps>
-        <h2>Complete your order</h2>
+        <h2>Follow the steps to complete your order</h2>
         {steps.map((text, index) => (
           <StepComponent key={index} number={index + 1} title={text} />
         ))}
@@ -48,22 +48,29 @@ const Steps = styled.section`
   display: flex;
   flex-direction: column;
   padding-bottom: 50px;
-  width: 40%;
+  width: 45%;
   gap: 20px;
 
   @media (min-width: 320px) and (max-width: 599px) {
-    margin-bottom: 50px;
     display: flex;
     gap: 15px;
-    width: 100%;
+    width: 90%;
+    order: 2;
   }
 
   h2 {
     align-self: center;
     font-size: 24px;
+    @media (min-width: 320px) and (max-width: 599px) {
+      font-size: 20px;
+    }
   }
 `;
 
 const FormSection = styled.section`
-  width: 40%;
+  width: 45%;
+  @media (min-width: 320px) and (max-width: 599px) {
+    width: 100%;
+    order: 1;
+  }
 `;

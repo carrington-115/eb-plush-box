@@ -19,6 +19,9 @@ const Container = styled.div`
   font-size: 20px;
   gap: 20px;
   width: 100%;
+  @media (min-width: 320px) and (max-width: 599px) {
+    font-size: 16px;
+  }
   span {
     padding: 5px 12px;
     border-radius: 20px;
@@ -28,5 +31,8 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     font-size: 20px;
+    @media (min-width: 320px) and (max-width: 599px) {
+      font-size: 18px;
+    }
   }
 `;

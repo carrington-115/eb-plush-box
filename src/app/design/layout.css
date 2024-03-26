@@ -12,9 +12,17 @@
 
 .page-container .page-details-container {
   margin: 50px 0px;
-  width: 100%;
-  align-self: flex-start;
+  width: 80%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+
+@media (min-width: 320px) and (max-width: 599px) {
+  .page-container .page-details-container {
+    width: 90%;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+  }
 }

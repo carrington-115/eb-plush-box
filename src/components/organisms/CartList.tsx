@@ -148,6 +148,7 @@ const Container = styled.section`
   gap: 100px;
   @media (min-width: 320px) and (max-width: 599px) {
     padding: 40px 20px;
+    width: 100%;
   }
   .inner-products {
     display: inherit;
@@ -170,9 +171,5 @@ const Container = styled.section`
       font-weight: 700;
       line-height: 44.976px;
     }
-  }
-
-  @media (min-width: 320px) and (max-width: 599px) {
-    width: 90%;
   }
 `;
