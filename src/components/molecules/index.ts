@@ -7,6 +7,7 @@ import AccordionElement from "./AccordionElement";
 import ProductSlider from "./ProductSlider";
 import CartElement from "./CartElement";
 import ContactComponent from "./ContactComponent";
+import Steps from "./Steps";
 
 export {
   Header,
@@ -18,4 +19,5 @@ export {
   ProductSlider,
   CartElement,
   ContactComponent,
+  Steps,
 };
