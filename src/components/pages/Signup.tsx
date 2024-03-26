@@ -10,7 +10,7 @@ function Signup() {
       <div className="left">
         <LoginDefSection
           btnText="Login instead?"
-          btnAction={() => navigate("/")}
+          btnAction={() => navigate("/login")}
           title="Sign up to"
         />
       </div>
