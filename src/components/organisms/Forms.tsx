@@ -266,9 +266,9 @@ function Forms({ type, submitAction }: formPropsType) {
             </div>
             <div className="bottom">
               <div className="date-code">
-                <input type="date" name="month" placeholder="xx" />
+                <input type="text" name="month" placeholder="xx" />
                 <span>/</span>
-                <input type="date" name="year" placeholder="xx" />
+                <input type="text" name="year" placeholder="xx" />
               </div>
               <div className="cvc-code">
                 <UserInput
@@ -285,6 +285,19 @@ function Forms({ type, submitAction }: formPropsType) {
             inputType="text"
             inputName="name"
             placeholder="Name"
+          />
+          <UserInput
+            type="dropdown"
+            inputName="state_code"
+            dropDown={{
+              dropDownName: "states",
+              dropDownValues: [
+                "--Select--",
+                "Washington DC",
+                "Florida",
+                "Arizona",
+              ],
+            }}
           />
         </form>
       </section>

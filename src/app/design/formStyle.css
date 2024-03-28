@@ -47,6 +47,39 @@
   display: flex;
   width: 100%;
   flex-direction: column;
+  gap: 20px;
+}
+
+.bank-info .bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkout-form .bank-info .bottom .date-code {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+  background-color: white;
+  padding: 15px 10px 15px 24px;
+  border-radius: 5px;
+  gap: 10px;
+}
+.date-code input {
+  border: none;
+  outline: none;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+  font-family: El Messiri;
+  width: 100%;
+  background-color: white;
+}
+.checkout-form .bank-info .bottom .cvc-code {
+  width: 65%;
 }
 
 .login-form .third-party-btns {
