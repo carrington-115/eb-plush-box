@@ -6,6 +6,7 @@ import { useState } from "react";
 import { IoMdStarOutline } from "react-icons/io";
 import { IoMdStar } from "react-icons/io";
 import { FaStripe } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 /*
     ** This is the types of form required **
@@ -23,6 +24,7 @@ interface rateInputType {
 }
 
 function Forms({ type, submitAction }: formPropsType) {
+  const navigate = useNavigate();
   const [rateInputState, setRateInputState] = useState([
     false,
     false,
@@ -77,6 +79,15 @@ function Forms({ type, submitAction }: formPropsType) {
         </form>
 
         <section className="third-party-btns">
+          <Button
+            text={true}
+            icon={false}
+            name="Sign up instead?"
+            status="tonal"
+            color="rgba(67, 31, 23, 1)"
+            bgColor="rgba(251, 247, 246, 1)"
+            btnAction={() => navigate("/signup")}
+          />
           <ThirdPartySignIn
             btnAction={() => console.log("sign in with 3rd party")}
             icon={<FaGoogle />}
@@ -127,7 +138,7 @@ function Forms({ type, submitAction }: formPropsType) {
           <Button
             text={true}
             icon={false}
-            name="Login"
+            name="Create account"
             status="fill"
             color="rgba(67, 31, 23, 1)"
             bgColor="rgba(251, 247, 246, 1)"
@@ -136,6 +147,15 @@ function Forms({ type, submitAction }: formPropsType) {
         </form>
 
         <section className="third-party-btns">
+          <Button
+            text={true}
+            icon={false}
+            name="Login instead?"
+            status="tonal"
+            color="rgba(67, 31, 23, 1)"
+            bgColor="rgba(251, 247, 246, 1)"
+            btnAction={() => navigate("/login")}
+          />
           <ThirdPartySignIn
             btnAction={() => console.log("sign in with 3rd party")}
             icon={<FaGoogle />}

@@ -35,12 +35,12 @@ function ContactComponent({
           iconLink={
             <MdLocalPhone
               style={{ width: "24px", height: "24px" }}
-              fill="#ead7d3"
+              fill="white"
             />
           }
           status="fill"
           btnAction={btnAction || handleInput}
-          color="#ead7d3"
+          color="white"
           bgColor="rgba(67, 31, 23, 1)"
         />
       </div>

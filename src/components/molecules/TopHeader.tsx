@@ -2,8 +2,10 @@ import styled from "styled-components";
 import { productImage } from "../../assets";
 import { Button } from "../atoms";
 import { IoIosArrowForward } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 
 function TopHeader() {
+  const navigate = useNavigate();
   return (
     <Container>
       <section className="inner-section">
@@ -24,7 +26,7 @@ function TopHeader() {
               bgColor="rgba(101, 57, 48, 1)"
               color="white"
               status="fill"
-              btnAction={() => console.log("start shopping now")}
+              btnAction={() => navigate("/shopping")}
               name="Start Shopping"
             />
           </div>

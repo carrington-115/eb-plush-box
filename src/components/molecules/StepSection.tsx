@@ -3,6 +3,7 @@ import { Button } from "../atoms";
 import { IoAlertSharp } from "react-icons/io5";
 import { IoIosArrowForward } from "react-icons/io";
 import { stepsSectionType } from "../../types/vartypes";
+import { useNavigate } from "react-router-dom";
 
 function StepSection({
   title,
@@ -11,6 +12,7 @@ function StepSection({
   btnName,
   bgColor,
 }: stepsSectionType) {
+  const navigate = useNavigate();
   return (
     <Container style={{ backgroundColor: bgColor }}>
       <div className="inner-section">
@@ -76,7 +78,7 @@ function StepSection({
               status="fill"
               color="rgba(255, 255, 255, 1)"
               bgColor="rgba(67, 31, 23, 1)"
-              btnAction={() => console.log("get started here")}
+              btnAction={() => navigate("/shopping")}
             />
           </div>
         </div>

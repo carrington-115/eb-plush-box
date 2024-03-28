@@ -13,11 +13,13 @@ import {
   Rate,
 } from "./components/pages";
 import { Header } from "./components/molecules";
+import { ReRouteToTop } from "./components/templates";
 
 function App() {
   return (
     <>
       <Router>
+        <ReRouteToTop />
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />

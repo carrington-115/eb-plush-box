@@ -1,3 +1,4 @@
 import FormStyle from "./FormStyle";
+import ReRouteToTop from "./ReRouteToTop";
 
-export { FormStyle };
+export { FormStyle, ReRouteToTop };
