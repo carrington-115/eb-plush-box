@@ -15,7 +15,7 @@ export default StepComponent;
 
 const Container = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   font-size: 20px;
   gap: 20px;
   width: 100%;

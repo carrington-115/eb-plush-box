@@ -7,7 +7,7 @@
 .login-form,
 .review-form,
 .contact-form,
-.checkoutform {
+.checkout-form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -82,6 +82,28 @@
   width: 65%;
 }
 
+.checkout-form {
+  gap: 0px;
+  width: 100%;
+}
+
+.checkout-form .powered-by-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: gray;
+}
+
+.powered-by-section .stripe-icon {
+  width: 113.915px;
+  height: 91.132px;
+}
+
+.stripe-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
 .login-form .third-party-btns {
   display: flex;
   flex-direction: column;
@@ -135,13 +157,28 @@
 
 @media (min-width: 320px) and (max-width: 599px) {
   .login-form,
-  .review-form {
+  .review-form,
+  .checkout-form {
     width: 100%;
+  }
+
+  .checkout-form form {
+    padding: 60px 20px;
+    width: 100%;
+    border: 1px solid black;
   }
 
   .contact-form form {
     border-radius: 20px 20px 0px 0px;
     padding: 60px 24px;
+  }
+
+  .checkout-form .bank-info .bottom .date-code {
+    width: 40%;
+    padding: 15px 10px;
+  }
+  .checkout-form .bank-info .bottom .cvc-code {
+    width: 55%;
   }
 
   .login-form form {

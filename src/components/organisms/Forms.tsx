@@ -5,6 +5,7 @@ import { formPropsType } from "../../types/vartypes";
 import { useState } from "react";
 import { IoMdStarOutline } from "react-icons/io";
 import { IoMdStar } from "react-icons/io";
+import { FaStripe } from "react-icons/fa";
 
 /*
     ** This is the types of form required **
@@ -300,6 +301,12 @@ function Forms({ type, submitAction }: formPropsType) {
             }}
           />
         </form>
+        <div className="powered-by-section">
+          <h2>Powered by</h2>
+          <span className="stripe-icon">
+            <FaStripe />
+          </span>
+        </div>
       </section>
     );
   }
