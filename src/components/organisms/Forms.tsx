@@ -50,7 +50,7 @@ function Forms({ type, submitAction }: formPropsType) {
   if (type === "login") {
     return (
       <div className="login-form">
-        <form onSubmit={(e) => e.preventDefault}>
+        <form onSubmit={(e) => e.preventDefault()}>
           <h3 className="heading">Login to your Account</h3>
           <UserInput
             type="simple"
@@ -97,7 +97,7 @@ function Forms({ type, submitAction }: formPropsType) {
   } else if (type === "signUp") {
     return (
       <div className="login-form">
-        <form onSubmit={(e) => e.preventDefault}>
+        <form onSubmit={(e) => e.preventDefault()}>
           <h3 className="heading">Create your Account</h3>
           <UserInput
             type="simple"
@@ -155,7 +155,7 @@ function Forms({ type, submitAction }: formPropsType) {
     );
   } else if (type === "subscribe") {
     return (
-      <form onSubmit={(e) => e.preventDefault} className="subscribe-form">
+      <form onSubmit={(e) => e.preventDefault()} className="subscribe-form">
         <h2 className="heading">Subscribe to Our newsletter</h2>
         <UserInput
           type="simple"
@@ -183,7 +183,7 @@ function Forms({ type, submitAction }: formPropsType) {
   } else if (type === "contact") {
     return (
       <div className="contact-form">
-        <form onSubmit={(e) => e.preventDefault}>
+        <form onSubmit={(e) => e.preventDefault()}>
           <UserInput
             type="simple"
             inputType="text"
@@ -216,7 +216,7 @@ function Forms({ type, submitAction }: formPropsType) {
   } else if (type === "review") {
     return (
       <div className="review-form">
-        <form onSubmit={(e) => e.preventDefault}>
+        <form onSubmit={(e) => e.preventDefault()}>
           <h2 className="heading">Rate us</h2>
           <div className="rate-btns">
             {rateInputs.map((rate) => (
@@ -243,6 +243,51 @@ function Forms({ type, submitAction }: formPropsType) {
           />
         </form>
       </div>
+    );
+  } else if (type === "checkout") {
+    return (
+      <section className="checkout-form">
+        <form onSubmit={(e) => e.preventDefault()}>
+          <h1 className="heading">Checkout Form</h1>
+          <UserInput
+            type="simple"
+            inputType="email"
+            inputName="email"
+            placeholder="Email"
+          />
+          <div className="bank-info">
+            <div className="top">
+              <UserInput
+                type="simple"
+                inputType="number"
+                inputName="account"
+                placeholder="xxxx xxxx xxxx xxxx"
+              />
+            </div>
+            <div className="bottom">
+              <div className="date-code">
+                <input type="date" name="month" placeholder="xx" />
+                <span>/</span>
+                <input type="date" name="year" placeholder="xx" />
+              </div>
+              <div className="cvc-code">
+                <UserInput
+                  type="simple"
+                  inputType="number"
+                  inputName="cvc_code"
+                  placeholder="CVC"
+                />
+              </div>
+            </div>
+          </div>
+          <UserInput
+            type="simple"
+            inputType="text"
+            inputName="name"
+            placeholder="Name"
+          />
+        </form>
+      </section>
     );
   }
   return <div>Forms</div>;

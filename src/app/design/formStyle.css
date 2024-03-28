@@ -6,7 +6,8 @@
 
 .login-form,
 .review-form,
-.contact-form {
+.contact-form,
+.checkoutform {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,7 +21,8 @@
 
 .login-form form,
 .review-form form,
-.contact-form form {
+.contact-form form,
+.checkout-form form {
   width: 100%;
   gap: 20px;
   display: flex;
@@ -32,12 +34,19 @@
 }
 
 .login-form .heading,
-.review-form .heading {
+.review-form .heading,
+.checkout-form .heading {
   font-size: 26.857px;
   font-style: normal;
   font-weight: 500;
   line-height: 40.286px;
   color: white;
+}
+
+.checkout-form form .bank-info {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
 }
 
 .login-form .third-party-btns {
