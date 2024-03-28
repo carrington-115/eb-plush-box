@@ -260,16 +260,16 @@ function Forms({ type, submitAction }: formPropsType) {
             <div className="top">
               <UserInput
                 type="simple"
-                inputType="number"
+                inputType="text"
                 inputName="account"
-                placeholder="xxxx xxxx xxxx xxxx"
+                placeholder="Account Number"
               />
             </div>
             <div className="bottom">
               <div className="date-code">
-                <input type="text" name="month" placeholder="xx" />
+                <input type="text" name="month" placeholder="MM" />
                 <span>/</span>
-                <input type="text" name="year" placeholder="xx" />
+                <input type="text" name="year" placeholder="YY" />
               </div>
               <div className="cvc-code">
                 <UserInput
@@ -299,6 +299,15 @@ function Forms({ type, submitAction }: formPropsType) {
                 "Arizona",
               ],
             }}
+          />
+          <Button
+            text={true}
+            icon={false}
+            name="Submit"
+            status="fill"
+            color="rgba(67, 31, 23, 1)"
+            bgColor="rgba(251, 247, 246, 1)"
+            btnAction={submitAction}
           />
         </form>
         <div className="powered-by-section">
